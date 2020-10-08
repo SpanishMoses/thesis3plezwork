@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 132606522}
   m_Layer: 8
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uSy7RKUAIAAPQEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzk3GJqSB3lqHkB6SMKGdXHwR1gprkCWPHuE1/PeuZBu7dHpi+fbb3W8f8okIZWsonDYLI9iLZkC+jUiwyZdR73yGPd1otRJH6DgfgrkykGjkvFMnNOJpCLO6AmdE8V1tZCAnCHoluDbVnG0g09ZZhDmVFtBltAvRCqHTiOzx52YWQg5ojR+CdURrlozOaBagHJie2hE7WsPyqpC0qoEFyT15MuvSppGmsJmWEYQXWkphWyXEHerYaUZr67EPJDBBsbNYPr29Q6AEsSldSDgMf+PcgmtFGXp4FAZH1OQlP3Qzt4rabaPsk0ofKt2n46iqSfryj/+mEc2Nrp67umkSarhSFNt3eiiodYPBDuHHgfQ4oB2VW7qW8FGCetULo71i6HTGh1BvYfzY/720lpVQbHu8kXoF+vr/6wk9nGP3+0yKah1ct5MGWEkdJx6XDwZ38xMFx9OwbQpEg4rfFn7RzfCGWseTMNahq+1SBXlr7U2gknmcWejGu0wbBRFuRdegqHSHJaZx1yu88g3KXnmeaHgtbfHW1z2Cq5AI9/wkuXIt9e6yLFvq3QvY8s07KRT0ooPjFeeUaaWaCxvOpAtbecNpMQjbeMH+Pi3CHxLOp8mE3nPg0/v1zfouZV+LKZ/SKV2nk4TE2xMK+6Ry2Qhtx4NbU31yhXfWfURGC0PreO3M0N1CHCs9GLlQXK8KA6DemgwX4WCwCL5LNmcCB7QC54SK+yannEhdbIHll0R57HS+d4bmfZac1OJTu4DkJItfjZycyfkPUEsDBBQAAAgIAACYn+s0G+Z+bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSmrlBWpqFgUmiaVpqmoVpkm6SsWGKWbJFmkWiRWKSoYmBUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+uSy7RKUAIAAPQEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+s0G+Z+bQAAAHgAAAAJACQAAAAAAAAAAAAAAJ0CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAVQMAAAAA
+    dataString: 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
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1513,9 +1513,9 @@ GameObject:
   m_Component:
   - component: {fileID: 883460878}
   - component: {fileID: 883460877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1690,9 +1690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1219094271}
   - component: {fileID: 1219094270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2078,9 +2078,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1418161430}
   - component: {fileID: 1418161429}
-  m_Layer: 0
+  - component: {fileID: 1418161432}
+  - component: {fileID: 1418161431}
+  m_Layer: 8
   m_Name: Square (15)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2150,6 +2152,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1418161431
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418161428}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &1418161432
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418161428}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1450138975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,9 +2209,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1450138977}
   - component: {fileID: 1450138976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2500,9 +2549,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1567051372}
   - component: {fileID: 1567051371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (12)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3065,9 +3114,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1775912708}
   - component: {fileID: 1775912707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (11)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3376,7 +3425,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 573264aece0d8974298541bf9f725593, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3414,7 +3463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8220e800b0a461644ad29c1b56da086f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 519420031}
 --- !u!1 &1909710331
 GameObject:
   m_ObjectHideFlags: 0

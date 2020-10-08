@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Boundaries : MonoBehaviour
 {
-    //code from https://www.youtube.com/watch?v=ailbszpt_AI&feature=emb_title&ab_channel=PressStart
-
-    public Camera mainCamera; 
-    private Vector2 screenBoundaries;
-    private float objectWidth;
-    private float objectHeight;
+    //code from https://answers.unity.com/questions/799656/how-to-keep-an-object-within-the-camera-view.html
 
     // Start is called before the first frame update
     void Start()
     {
-        screenBoundaries = mainCamera.ScreenToWorldPoint(new Vector3 (Screen.width, Screen.height, mainCamera.transform.position.z));
-        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        
     }
 
     // Update is called once per frame
@@ -27,9 +20,9 @@ public class Boundaries : MonoBehaviour
 
     private void Update()
     {
-        Vector3 viewPos = transform.position;
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBoundaries.x + objectWidth, screenBoundaries.x - objectWidth);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBoundaries.y + objectHeight, screenBoundaries.y - objectHeight);
-        transform.position = viewPos;
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        pos.x = Mathf.Clamp01(pos.x);
+        pos.y = Mathf.Clamp01(pos.y);
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 }
