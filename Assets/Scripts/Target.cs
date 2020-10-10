@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+
+    public GameObject playerCam;
+    public GameObject puzzleCam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,13 @@ public class Target : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player"){
+            playerCam.SetActive(false);
+            puzzleCam.SetActive(true);
+        }
     }
 }
