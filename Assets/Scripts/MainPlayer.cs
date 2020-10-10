@@ -60,4 +60,15 @@ public class MainPlayer : MonoBehaviour
         canJump = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform"){
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
+        if (collision.gameObject.tag == "Floor")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
+    }
 }
