@@ -31,6 +31,7 @@ public class Dog : MonoBehaviour
 
     //public Animator anim;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class Dog : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //SearchTargets();
         InvokeRepeating("UpdatePath", 0f, .5f);
-
+        
     }
 
     void UpdatePath()
@@ -84,30 +85,9 @@ public class Dog : MonoBehaviour
         {
             currentWaypoint++;
         }
-
     }
 
-    /*void SearchTargets(){
-        testTargets = GameObject.FindGameObjectsWithTag("Target");
-        
-    }
-
-    public Transform FindClosestTarget(){
-        float closestDistance = Mathf.Infinity;
-        Transform trans = null;
-
-        foreach (GameObject go in testTargets){
-            float currentDistance;
-            currentDistance = Vector3.Distance(transform.position, go.transform.position);
-            if (currentDistance < closestDistance){
-                closestDistance = currentDistance;
-                trans = go.transform;
-                currTarget = trans;
-            }
-        }
-        return trans;
-    }*/
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Platform")
@@ -117,6 +97,18 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             gameObject.transform.parent = collision.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag != "Player"){
+            rb.AddForce(Vector2.up * 100f);
+        }
+
+        if (collision.gameObject.tag != "Floor")
+        {
+            rb.AddForce(Vector2.up * 100f);
         }
     }
 }

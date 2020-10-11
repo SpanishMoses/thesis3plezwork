@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46618460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.78888, y: -16.31, z: 10.882824}
+  m_LocalPosition: {x: 30.78888, y: -15.95, z: 10.882824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 180871891}
   - component: {fileID: 180871890}
   - component: {fileID: 180871889}
+  - component: {fileID: 180871893}
   m_Layer: 10
   m_Name: dog
   m_TagString: Dog
@@ -955,6 +956,23 @@ MonoBehaviour:
   seeker: {fileID: 180871891}
   rb: {fileID: 180871890}
   groundCheckPoint: {fileID: 0}
+  faceRight: 0
+--- !u!58 &180871893
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180871886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.32, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.18
 --- !u!1 &226618426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,7 +2684,7 @@ GameObject:
   - component: {fileID: 1266253641}
   m_Layer: 0
   m_Name: dog elevator switch
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5292,8 +5310,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111205960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.78888, y: -16.31, z: 22.600283}
-  m_LocalScale: {x: 10.895625, y: 0.3, z: 1}
+  m_LocalPosition: {x: 30.78888, y: -15.95, z: 22.600283}
+  m_LocalScale: {x: 10.895625, y: 0.76, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
   m_RootOrder: 12
