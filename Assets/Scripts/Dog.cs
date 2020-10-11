@@ -105,10 +105,5 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag != "Player"){
             rb.AddForce(Vector2.up * 100f);
         }
-
-        if (collision.gameObject.tag != "Floor")
-        {
-            rb.AddForce(Vector2.up * 100f);
-        }
     }
 }

@@ -956,7 +956,6 @@ MonoBehaviour:
   seeker: {fileID: 180871891}
   rb: {fileID: 180871890}
   groundCheckPoint: {fileID: 0}
-  faceRight: 0
 --- !u!58 &180871893
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1560,7 +1559,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 93f96302052a091499b79d687818a022, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.328
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4638,7 +4637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1863310796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,7 +5394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2140145888
 MonoBehaviour:
   m_ObjectHideFlags: 0
