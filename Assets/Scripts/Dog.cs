@@ -102,8 +102,16 @@ public class Dog : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player"){
-            rb.AddForce(Vector2.up * 100f);
+        /*if (collision.gameObject.tag != "Player"){
+            rb.AddForce(Vector2.up * 200f);
+        }*/
+        if (collision.gameObject.tag == "Floor")
+        {
+            rb.AddForce(Vector2.up * 200f);
+        }
+        if (collision.gameObject.tag == "Platform")
+        {
+            rb.AddForce(Vector2.up * 200f);
         }
     }
 }
