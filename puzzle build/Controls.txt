@@ -1,0 +1,13 @@
+If playing with any controller (PS4 for reference)
+- Left analog stick to move character
+- right analog stick to move cursor
+- X to jump
+- Square to select target
+- Circle to call back dog
+
+If playing with a mouse and keyboad
+- A and D to move character
+- Mouse to move cursor
+- Space to jump
+- Left click to select target
+- Right click to call back dog
