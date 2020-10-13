@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RevertCam : MonoBehaviour
 {
-
+    public GameObject cursor;
     public GameObject playerCam;
     public GameObject puzzleCam;
 
@@ -26,6 +26,7 @@ public class RevertCam : MonoBehaviour
         {
             playerCam.SetActive(true);
             puzzleCam.SetActive(false);
+            cursor.transform.parent = playerCam.gameObject.transform;
         }
     }
 }

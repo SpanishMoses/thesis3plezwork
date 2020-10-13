@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchCam : MonoBehaviour
 {
-
+    public GameObject Cursor;
     public GameObject playerCam;
     public GameObject puzzleCam;
 
@@ -26,6 +26,7 @@ public class SwitchCam : MonoBehaviour
         {
             playerCam.SetActive(false);
             puzzleCam.SetActive(true);
+            Cursor.transform.parent = puzzleCam.gameObject.transform;
         }
     }
 }
