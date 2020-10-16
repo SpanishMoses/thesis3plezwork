@@ -2600,7 +2600,7 @@ TilemapCollider2D:
   m_Material: {fileID: 6200000, guid: 287d1815b90a2234fa363ff404c954ac, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 100
   m_ExtrusionFactor: 0.00001
