@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.UI;
 
-public class Cursor : MonoBehaviour
+public class GameCursor : MonoBehaviour
 {
     public Dog dog;
 
@@ -16,10 +17,16 @@ public class Cursor : MonoBehaviour
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         player = ReInput.players.GetPlayer(playerID);
+        
     }
 
     // Update is called once per frame

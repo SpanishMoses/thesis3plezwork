@@ -30,6 +30,7 @@ public class MainPlayer : MonoBehaviour
     void Start()
     {
         player = ReInput.players.GetPlayer(playerID);
+        
     }
 
     // Update is called once per frame
