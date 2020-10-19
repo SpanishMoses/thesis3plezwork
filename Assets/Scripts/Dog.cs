@@ -32,6 +32,10 @@ public class Dog : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
+    public CircleCollider2D circle;
+
+    int playerLayer, platformLayer;
+
     //public Animator anim;
 
 
@@ -42,7 +46,6 @@ public class Dog : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //SearchTargets();
         InvokeRepeating("UpdatePath", 0f, .5f);
-        
     }
 
     void UpdatePath()
@@ -97,6 +100,18 @@ public class Dog : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+
+        if (rb.velocity.x > 0){
+            circle.offset = new Vector2(1.08f, 0);
+        } else if (rb.velocity.x < 0){
+            circle.offset = new Vector2(-1.08f, 0);
+        }
+
+        /*RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, 2f);
+        if (ray.collider == null){
+            rb.AddForce(Vector2.up * 200f);
+            Debug.Log("erp");
+        }*/
     }
 
     

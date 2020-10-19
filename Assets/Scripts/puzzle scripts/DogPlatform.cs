@@ -28,4 +28,17 @@ public class DogPlatform : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, bottomPT.position, speed * Time.deltaTime);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 9;
+        }
+    }
 }
+

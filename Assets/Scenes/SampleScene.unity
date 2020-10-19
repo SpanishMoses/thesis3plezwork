@@ -600,6 +600,7 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 0}
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+  circle: {fileID: 180871893}
 --- !u!58 &180871893
 CircleCollider2D:
   m_ObjectHideFlags: 0
