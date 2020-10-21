@@ -27,7 +27,9 @@ public class Dog : MonoBehaviour
     public Seeker seeker;
     public Rigidbody2D rb;
 
+    public bool isGrounded;
     public Transform groundCheckPoint;
+    public float groundCheckRadius;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
@@ -35,6 +37,9 @@ public class Dog : MonoBehaviour
     public CircleCollider2D circle;
 
     int playerLayer, platformLayer;
+
+    public float rayDist;
+    public LayerMask layer;
 
     //public Animator anim;
 
@@ -92,7 +97,7 @@ public class Dog : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < 0 || currTarget.position.x > 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
@@ -107,11 +112,18 @@ public class Dog : MonoBehaviour
             circle.offset = new Vector2(-1.08f, 0);
         }
 
-        /*RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, 2f);
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius);
+        if (isGrounded == false){
+            rb.AddForce(Vector2.up * 400f);
+        }
+
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
         if (ray.collider == null){
-            rb.AddForce(Vector2.up * 200f);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.velocity += Vector2.up * 7f;
             Debug.Log("erp");
-        }*/
+        }
+        Debug.DrawRay(transform.position, -Vector2.up, Color.red);
     }
 
     
@@ -124,6 +136,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             gameObject.transform.parent = collision.gameObject.transform;
+
         }
     }
 
@@ -134,11 +147,11 @@ public class Dog : MonoBehaviour
         }*/
         if (collision.gameObject.tag == "Floor")
         {
-            rb.AddForce(Vector2.up * 200f);
+            rb.AddForce(Vector2.up * 400f);
         }
         if (collision.gameObject.tag == "Platform")
         {
-            rb.AddForce(Vector2.up * 200f);
+            rb.AddForce(Vector2.up * 400f);
         }
     }
 }
