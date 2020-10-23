@@ -203,8 +203,10 @@ PlayableDirector:
     value: {fileID: 852081566}
   - key: {fileID: 603121183241696027, guid: 6a8dc6d9f073ed4469c083bf7917e094, type: 2}
     value: {fileID: 1583883662}
-  - key: {fileID: 5769316214626691688, guid: 6a8dc6d9f073ed4469c083bf7917e094, type: 2}
+  - key: {fileID: 2217005030915277141, guid: 6a8dc6d9f073ed4469c083bf7917e094, type: 2}
     value: {fileID: 1583883662}
+  - key: {fileID: 2453430188053046637, guid: 6a8dc6d9f073ed4469c083bf7917e094, type: 2}
+    value: {fileID: 852081566}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &266397463
@@ -281,7 +283,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -317,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852081564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81, y: -0.52, z: 0}
+  m_LocalPosition: {x: -4.59, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
