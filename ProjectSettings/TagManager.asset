@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Dog
   - Platform
+  - Dig
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - obtsacle
   - dog
   - player
-  - 
+  - Dig
   - 
   - 
   - 

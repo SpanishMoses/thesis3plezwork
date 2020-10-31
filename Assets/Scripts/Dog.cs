@@ -41,6 +41,8 @@ public class Dog : MonoBehaviour
     public float rayDist;
     public LayerMask layer;
 
+    public GameObject exclamation;
+
     //public Animator anim;
 
 
@@ -152,6 +154,18 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             rb.AddForce(Vector2.up * 400f);
+        }
+
+        if (collision.gameObject.tag == "Dig"){
+            exclamation.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Dig")
+        {
+            exclamation.SetActive(false);
         }
     }
 }
