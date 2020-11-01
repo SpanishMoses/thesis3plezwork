@@ -6,8 +6,10 @@ using Rewired;
 public class MainPlayer : MonoBehaviour
 {
     //good jump code from https://www.youtube.com/watch?v=7KiK0Aqtmzc&ab_channel=BoardToBitsGames
+    //throwing script help from https://www.youtube.com/watch?v=3DUmpVi82q8&t=176s&ab_channel=TheGameGuy
 
     public Dog dog;
+    
 
     public float speed;
 
@@ -25,6 +27,14 @@ public class MainPlayer : MonoBehaviour
 
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
+
+    public GameObject snowball;
+    public float launchForce;
+    public GameObject point;
+    public GameObject[] points;
+    public int numberOfPoints;
+    public float force;
+    Vector2 Direction;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +75,7 @@ public class MainPlayer : MonoBehaviour
         canJump = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
