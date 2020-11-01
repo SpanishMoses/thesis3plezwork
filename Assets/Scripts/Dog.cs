@@ -42,6 +42,8 @@ public class Dog : MonoBehaviour
     public LayerMask layer;
 
     public GameObject exclamation;
+    public bool canDig;
+    public bool startDig;
 
     //public Animator anim;
 
@@ -126,6 +128,27 @@ public class Dog : MonoBehaviour
             Debug.Log("erp");
         }
         Debug.DrawRay(transform.position, -Vector2.up, Color.red);
+
+        if (startDig == true){
+            canDig = false;
+            StartCoroutine(begindig());
+        }
+
+    }
+
+    IEnumerator begindig(){
+        yield return new WaitForSeconds(1);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
+
+        foreach (Collider2D near in colliders){
+            DigSpot dig = near.GetComponent<DigSpot>();
+            if (dig != null && dig.dug == false){
+                //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
+                dig.spawn();
+                dig.dug = true;
+            }
+        }
+        startDig = false;
     }
 
     
@@ -158,6 +181,7 @@ public class Dog : MonoBehaviour
 
         if (collision.gameObject.tag == "Dig"){
             exclamation.SetActive(true);
+            canDig = true;
         }
     }
 
@@ -166,6 +190,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Dig")
         {
             exclamation.SetActive(false);
+            canDig = false;
         }
     }
 }

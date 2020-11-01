@@ -49,6 +49,10 @@ public class MainPlayer : MonoBehaviour
             dog.currTarget = dog.playerTarget.transform;
         }
 
+        if (player.GetButton("DogAction") && dog.canDig == true && dog.startDig == false){
+            dog.startDig = true;
+        }
+
         
 
         if (rb.velocity.y < 0){
