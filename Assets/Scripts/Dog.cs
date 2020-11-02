@@ -45,6 +45,9 @@ public class Dog : MonoBehaviour
     public bool canDig;
     public bool startDig;
 
+    public bool canBite;
+    public bool startBite;
+
     //public Animator anim;
 
 
@@ -134,6 +137,10 @@ public class Dog : MonoBehaviour
             StartCoroutine(begindig());
         }
 
+        if (startBite == true){
+            canBite = false;
+            StartCoroutine(beginbite());
+        }
     }
 
     IEnumerator begindig(){
@@ -149,6 +156,21 @@ public class Dog : MonoBehaviour
             }
         }
         startDig = false;
+    }
+
+    IEnumerator beginbite(){
+        yield return new WaitForSeconds(1);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
+        foreach (Collider2D near in colliders)
+        {
+            Rope rope = near.GetComponent<Rope>();
+            if (rope != null)
+            {
+                //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
+                Destroy(near.gameObject);
+            }
+        }
+        startBite = false;
     }
 
     
@@ -183,6 +205,11 @@ public class Dog : MonoBehaviour
             exclamation.SetActive(true);
             canDig = true;
         }
+
+        if (collision.gameObject.tag == "Rope"){
+            exclamation.SetActive(true);
+            canBite = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -191,6 +218,11 @@ public class Dog : MonoBehaviour
         {
             exclamation.SetActive(false);
             canDig = false;
+        }
+        if (collision.gameObject.tag == "Rope")
+        {
+            exclamation.SetActive(false);
+            canBite = false;
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Dog
   - Platform
   - Dig
+  - Rope
   layers:
   - Default
   - TransparentFX

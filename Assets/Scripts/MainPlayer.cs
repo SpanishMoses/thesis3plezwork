@@ -63,7 +63,9 @@ public class MainPlayer : MonoBehaviour
             dog.startDig = true;
         }
 
-        
+        if (player.GetButton("DogAction") && dog.canBite == true && dog.startBite == false){
+            dog.startBite = true;
+        }
 
         if (rb.velocity.y < 0){
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
