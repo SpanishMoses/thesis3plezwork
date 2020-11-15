@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - Dig
   - Rope
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - player
   - Dig
   - SnowBall
-  - 
+  - Block
   - 
   - 
   - 
