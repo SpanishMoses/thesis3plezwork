@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.UI;
 
 public class Dog : MonoBehaviour
 {
@@ -48,6 +49,9 @@ public class Dog : MonoBehaviour
     public bool canBite;
     public bool startBite;
 
+    public bool gotKey;
+    public GameObject keyText;
+
     //public Animator anim;
 
 
@@ -58,6 +62,7 @@ public class Dog : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //SearchTargets();
         InvokeRepeating("UpdatePath", 0f, .5f);
+        gotKey = false;
     }
 
     void UpdatePath()
@@ -184,6 +189,11 @@ public class Dog : MonoBehaviour
         {
             gameObject.transform.parent = collision.gameObject.transform;
 
+        }
+        if (collision.gameObject.tag == "Key"){
+            gotKey = true;
+            keyText.SetActive(true);
+            Destroy(collision.gameObject);
         }
     }
 

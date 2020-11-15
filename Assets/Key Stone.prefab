@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5491260624228500943}
   m_Layer: 0
   m_Name: Key Stone
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,5 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29fb2da30db5e04a9cd4f0099a98e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
   rb: {fileID: 5491260624228500942}

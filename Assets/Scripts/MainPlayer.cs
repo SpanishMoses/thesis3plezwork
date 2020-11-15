@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.UI;
 
 public class MainPlayer : MonoBehaviour
 {
@@ -28,19 +29,14 @@ public class MainPlayer : MonoBehaviour
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
 
-    public GameObject snowball;
-    public float launchForce;
-    public GameObject point;
-    public GameObject[] points;
-    public int numberOfPoints;
-    public float force;
-    Vector2 Direction;
+    public bool gotKey;
+    public GameObject keyText;
 
     // Start is called before the first frame update
     void Start()
     {
         player = ReInput.players.GetPlayer(playerID);
-        
+        gotKey = false;
     }
 
     // Update is called once per frame
@@ -87,6 +83,12 @@ public class MainPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             gameObject.transform.parent = collision.gameObject.transform;
+        }
+        if (collision.gameObject.tag == "Key")
+        {
+            gotKey = true;
+            keyText.SetActive(true);
+            Destroy(collision.gameObject);
         }
     }
 }
