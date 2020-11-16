@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     
     public Rigidbody2D rb;
+    public CircleCollider2D circle;
 
     private void Awake()
     {
@@ -15,7 +16,8 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * 10f;
+        rb.velocity = transform.up * 10f;
+        StartCoroutine(enable());
     }
 
     // Update is called once per frame
@@ -27,5 +29,10 @@ public class Key : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
+    }
+
+    IEnumerator enable(){
+        yield return new WaitForSeconds(0.5f);
+        circle.enabled = true;
     }
 }
