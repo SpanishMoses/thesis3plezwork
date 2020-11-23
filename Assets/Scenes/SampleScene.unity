@@ -9300,6 +9300,7 @@ GameObject:
   - component: {fileID: 604024232}
   - component: {fileID: 604024231}
   - component: {fileID: 604024230}
+  - component: {fileID: 604024234}
   m_Layer: 8
   m_Name: dog platform (2)
   m_TagString: Platform
@@ -9348,7 +9349,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -9435,6 +9436,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &604024234
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604024228}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 185.01
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &661775509
 GameObject:
   m_ObjectHideFlags: 0
@@ -19295,6 +19315,7 @@ GameObject:
   - component: {fileID: 971371957}
   - component: {fileID: 971371961}
   - component: {fileID: 971371958}
+  - component: {fileID: 971371962}
   m_Layer: 0
   m_Name: rope (1)
   m_TagString: Rope
@@ -19310,7 +19331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971371955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.2, y: 16.37, z: 127.59137}
+  m_LocalPosition: {x: -6.05, y: 16.37, z: 127.59137}
   m_LocalScale: {x: 0.2834816, y: 6.194764, z: 1}
   m_Children:
   - {fileID: 532548952}
@@ -19346,7 +19367,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.5000207, y: -0.49999982}
-  m_ConnectedAnchor: {x: 214.84721, y: 17.782536}
+  m_ConnectedAnchor: {x: 214.99721, y: 17.782536}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -19453,6 +19474,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!233 &971371962
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971371955}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -0.000016051006, y: 0.5}
+  m_ConnectedAnchor: {x: 214.85545, y: 23.977299}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &1001605645
 GameObject:
   m_ObjectHideFlags: 0
@@ -19977,6 +20022,7 @@ GameObject:
   - component: {fileID: 1235686226}
   - component: {fileID: 1235686225}
   - component: {fileID: 1235686227}
+  - component: {fileID: 1235686228}
   m_Layer: 8
   m_Name: human platform
   m_TagString: Platform
@@ -20081,7 +20127,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -20112,6 +20158,25 @@ MonoBehaviour:
   bottomPT: {fileID: 335070235}
   topPT: {fileID: 1182548227}
   dog: {fileID: 1266253641}
+--- !u!251 &1235686228
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235686222}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 185.01
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1245494796
 GameObject:
   m_ObjectHideFlags: 0
@@ -20420,6 +20485,7 @@ GameObject:
   - component: {fileID: 1294583785}
   - component: {fileID: 1294583784}
   - component: {fileID: 1294583783}
+  - component: {fileID: 1294583787}
   m_Layer: 8
   m_Name: dog platform (1)
   m_TagString: Platform
@@ -20468,7 +20534,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -20555,6 +20621,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1294583787
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294583781}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 185.01
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1308612106
 GameObject:
   m_ObjectHideFlags: 0
@@ -21607,6 +21692,7 @@ GameObject:
   - component: {fileID: 1572323562}
   - component: {fileID: 1572323561}
   - component: {fileID: 1572323560}
+  - component: {fileID: 1572323565}
   m_Layer: 8
   m_Name: dog platform (1)
   m_TagString: Platform
@@ -21641,7 +21727,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -21742,6 +21828,25 @@ Transform:
   m_Father: {fileID: 1492018328}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1572323565
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572323559}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 185.01
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1582789015
 GameObject:
   m_ObjectHideFlags: 0
@@ -39515,6 +39620,7 @@ GameObject:
   - component: {fileID: 2111205965}
   - component: {fileID: 2111205964}
   - component: {fileID: 2111205963}
+  - component: {fileID: 2111205966}
   m_Layer: 8
   m_Name: dog platform
   m_TagString: Platform
@@ -39614,7 +39720,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -39650,6 +39756,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!251 &2111205966
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111205960}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 185.01
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2140145887
 GameObject:
   m_ObjectHideFlags: 0

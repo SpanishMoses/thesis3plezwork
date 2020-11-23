@@ -167,6 +167,7 @@ public class Dog : MonoBehaviour
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
                 dig.spawn();
                 dig.dug = true;
+                currTarget = transform;
             }
         }
         startDig = false;
@@ -182,6 +183,7 @@ public class Dog : MonoBehaviour
             {
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
                 rope.disable = true;
+                currTarget = transform;
                 //Destroy(near.gameObject);
             }
         }
@@ -194,6 +196,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             gameObject.transform.parent = collision.gameObject.transform;
+            currTarget = transform;
         }
         if (collision.gameObject.tag == "Floor")
         {
@@ -216,11 +219,11 @@ public class Dog : MonoBehaviour
         }*/
         if (collision.gameObject.tag == "Floor")
         {
-            rb.AddForce(Vector2.up * 400f);
+            rb.AddForce(Vector2.up * 100f);
         }
         if (collision.gameObject.tag == "Platform")
         {
-            rb.AddForce(Vector2.up * 400f);
+            rb.AddForce(Vector2.up * 100f);
         }
 
         if (collision.gameObject.tag == "Dig"){
