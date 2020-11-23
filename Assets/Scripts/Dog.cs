@@ -9,6 +9,8 @@ public class Dog : MonoBehaviour
     //from https://www.youtube.com/watch?v=jvtFUfJ6CP8&t=301s
     // go to closest target from https://www.youtube.com/watch?v=VH-bUST_w0o&ab_channel=IndieGamesDev
 
+    //public GameObject cursorPoint;
+
     public Transform myLocation;
 
     public bool isFollowingPlayer;
@@ -123,10 +125,22 @@ public class Dog : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        if (rb.velocity.x > 0){
-            circle.offset = new Vector2(1.08f, 0);
-        } else if (rb.velocity.x < 0){
-            circle.offset = new Vector2(-1.08f, 0);
+        if (rb.velocity.x > 0 && isGrounded == true){
+            RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left, rayDist, jumpLayer);
+            if (ray3.collider != null)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * 14f;
+                Debug.Log("erp");
+            }
+        } else if (rb.velocity.x < 0 && isGrounded == true){
+            RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
+            if (ray2.collider != null)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * 14f;
+                Debug.Log("erp");
+            }
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
@@ -140,10 +154,10 @@ public class Dog : MonoBehaviour
             if (ray.collider == null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.velocity += Vector2.up * 7f;
+                rb.velocity += Vector2.up * 14f;
                 Debug.Log("erp");
             }
-            RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
+            /*RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
             if (ray2.collider != null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -156,7 +170,7 @@ public class Dog : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 Debug.Log("erp");
-            }
+            }*/
         }
         Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);
         Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
@@ -214,7 +228,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             gameObject.transform.parent = collision.gameObject.transform;
-            currTarget = transform;
+            //currTarget = transform;
         }
         if (collision.gameObject.tag == "Floor")
         {
@@ -228,7 +242,14 @@ public class Dog : MonoBehaviour
         }
     }
 
-    
+    /*private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            cursorPoint.transform.parent = null;
+            //currTarget = transform;
+        }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

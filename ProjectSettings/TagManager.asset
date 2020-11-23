@@ -12,6 +12,7 @@ TagManager:
   - Rope
   - Key
   - Point
+  - Snow
   layers:
   - Default
   - TransparentFX
