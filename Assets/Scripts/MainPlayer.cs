@@ -53,6 +53,7 @@ public class MainPlayer : MonoBehaviour
 
         if (player.GetButton("ComeBack")){
             dog.currTarget = dog.playerTarget.transform;
+            dog.isFollowingPlayer = true;
         }
 
         if (player.GetButton("DogAction") && dog.canDig == true && dog.startDig == false){

@@ -6,11 +6,12 @@ public class Box : MonoBehaviour
 {
     public bool canPush;
     public Rigidbody2D rb;
+    public HingeJoint2D hinge;
 
     // Start is called before the first frame update
     void Start()
     {
-        canPush = false;
+        //canPush = false;
     }
 
     // Update is called once per frame
@@ -35,7 +36,10 @@ public class Box : MonoBehaviour
 
         if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog"){
             canPush = false;
-        } 
+        }
+        if (collision.gameObject.tag == "Floor"){
+            rb.gravityScale = 1f;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

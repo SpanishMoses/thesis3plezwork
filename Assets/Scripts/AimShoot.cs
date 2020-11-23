@@ -9,8 +9,8 @@ public class AimShoot : MonoBehaviour
     public GameObject throwPt;
     public GameObject snowball;
     public float launchForce;
-    public GameObject point;
-    public GameObject[] points;
+    //public GameObject point;
+    //public GameObject[] points;
     public int numberOfPoints;
     public float force;
     Vector2 Direction;
@@ -22,11 +22,11 @@ public class AimShoot : MonoBehaviour
     void Start()
     {
         player = ReInput.players.GetPlayer(playerID);
-        points = new GameObject[numberOfPoints];
+        /*points = new GameObject[numberOfPoints];
         for (int i = 0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, throwPt.transform.position, Quaternion.identity);
-        }
+        }*/
     }
 
 // Update is called once per frame
@@ -40,18 +40,18 @@ void Update()
     if (player.GetButtonDown("Aim&Shoot"))
     {
 
-        for (int i = 0; i < points.Length; i++)
+        /*for (int i = 0; i < points.Length; i++)
         {
             points[i].transform.position = PointPosition(i * 0.1f);
-        }
+        }*/
     }
 
     if (player.GetButtonUp("Aim&Shoot"))
     {
-            for (int i = 0; i < points.Length; i++)
+            /*for (int i = 0; i < points.Length; i++)
             {
                 Destroy(points[i]);
-            }
+            }*/
             GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);
         snowballIns.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }

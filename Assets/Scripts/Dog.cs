@@ -11,6 +11,8 @@ public class Dog : MonoBehaviour
 
     public Transform myLocation;
 
+    public bool isFollowingPlayer;
+
     public GameObject playerTarget;
     //public GameObject[] testTargets;
     public GameObject cursorTarget;
@@ -31,6 +33,7 @@ public class Dog : MonoBehaviour
     public bool isGrounded;
     public Transform groundCheckPoint;
     public float groundCheckRadius;
+    public LayerMask groundLayer;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
@@ -124,16 +127,20 @@ public class Dog : MonoBehaviour
             circle.offset = new Vector2(-1.08f, 0);
         }
 
-        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius);
-        if (isGrounded == false){
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+        /*if (isGrounded == false){
             rb.AddForce(Vector2.up * 400f);
-        }
+        }*/
 
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
-        if (ray.collider == null){
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.velocity += Vector2.up * 7f;
-            Debug.Log("erp");
+        if (isGrounded == true)
+        {
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
+            if (ray.collider == null)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * 7f;
+                Debug.Log("erp");
+            }
         }
         Debug.DrawRay(transform.position, -Vector2.up, Color.red);
 
@@ -146,6 +153,8 @@ public class Dog : MonoBehaviour
             canBite = false;
             StartCoroutine(beginbite());
         }
+
+        
     }
 
     IEnumerator begindig(){
@@ -172,7 +181,8 @@ public class Dog : MonoBehaviour
             if (rope != null)
             {
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
-                Destroy(near.gameObject);
+                rope.disable = true;
+                //Destroy(near.gameObject);
             }
         }
         startBite = false;
@@ -197,6 +207,8 @@ public class Dog : MonoBehaviour
         }
     }
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         /*if (collision.gameObject.tag != "Player"){
@@ -220,6 +232,9 @@ public class Dog : MonoBehaviour
             exclamation.SetActive(true);
             canBite = true;
         }
+        /*if (collision.gameObject.tag == "Point"){
+            currTarget = transform;
+        }*/
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -234,5 +249,6 @@ public class Dog : MonoBehaviour
             exclamation.SetActive(false);
             canBite = false;
         }
+
     }
 }

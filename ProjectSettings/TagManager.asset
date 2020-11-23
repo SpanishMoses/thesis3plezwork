@@ -11,6 +11,7 @@ TagManager:
   - Dig
   - Rope
   - Key
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Dig
   - SnowBall
   - Block
-  - 
+  - cursor
   - 
   - 
   - 

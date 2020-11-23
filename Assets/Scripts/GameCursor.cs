@@ -13,7 +13,7 @@ public class GameCursor : MonoBehaviour
     public float speed;
 
     public GameObject movePoint;
-
+    public LayerMask layer;
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
 
@@ -43,12 +43,14 @@ public class GameCursor : MonoBehaviour
         if (player.GetButton("Interact"))
         {
             //dog.currTarget = dog.cursorTarget.transform;
-            RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up);
+            dog.isFollowingPlayer = false;
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, 100f, layer);
 
             if (ray.collider != null){
                 
                 movePoint.transform.position = ray.point;
                 dog.currTarget = movePoint.transform;
+                
             }
         }
     }
