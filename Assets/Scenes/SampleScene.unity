@@ -752,10 +752,13 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   circle: {fileID: 180871893}
-  rayDist: 10
+  jumpLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  rayDist: 5
   layer:
     serializedVersion: 2
-    m_Bits: 2871
+    m_Bits: 823
   exclamation: {fileID: 336524537}
   canDig: 0
   startDig: 0
@@ -770,7 +773,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180871886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -20501,8 +20504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294583781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.58, y: 2.6, z: 127.59137}
-  m_LocalScale: {x: 10.895625, y: 0.1407928, z: 1}
+  m_LocalPosition: {x: 12.58, y: 2.745, z: 127.59137}
+  m_LocalScale: {x: 10.895625, y: 0.43078887, z: 1}
   m_Children: []
   m_Father: {fileID: 1351049339}
   m_RootOrder: 2
@@ -38923,7 +38926,7 @@ MonoBehaviour:
   movePoint: {fileID: 1245494796}
   layer:
     serializedVersion: 2
-    m_Bits: 32567
+    m_Bits: 256
   playerID: 0
 --- !u!212 &1832591519
 SpriteRenderer:

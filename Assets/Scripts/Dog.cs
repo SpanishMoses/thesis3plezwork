@@ -42,6 +42,8 @@ public class Dog : MonoBehaviour
 
     int playerLayer, platformLayer;
 
+    public LayerMask jumpLayer;
+
     public float rayDist;
     public LayerMask layer;
 
@@ -141,8 +143,24 @@ public class Dog : MonoBehaviour
                 rb.velocity += Vector2.up * 7f;
                 Debug.Log("erp");
             }
+            RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
+            if (ray2.collider != null)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * 14f;
+                Debug.Log("erp");
+            }
+            RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left, rayDist, jumpLayer);
+            if (ray3.collider != null)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.velocity += Vector2.up * 14f;
+                Debug.Log("erp");
+            }
         }
-        Debug.DrawRay(transform.position, -Vector2.up, Color.red);
+        Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);
+        Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
+        Debug.DrawRay(transform.position, -Vector2.left, Color.red, rayDist);
 
         if (startDig == true){
             canDig = false;
@@ -216,15 +234,15 @@ public class Dog : MonoBehaviour
     {
         /*if (collision.gameObject.tag != "Player"){
             rb.AddForce(Vector2.up * 200f);
-        }*/
+        }
         if (collision.gameObject.tag == "Floor")
         {
-            rb.AddForce(Vector2.up * 100f);
+            rb.AddForce(Vector2.up * 70f);
         }
         if (collision.gameObject.tag == "Platform")
         {
-            rb.AddForce(Vector2.up * 100f);
-        }
+            rb.AddForce(Vector2.up * 70f);
+        }*/
 
         if (collision.gameObject.tag == "Dig"){
             exclamation.SetActive(true);

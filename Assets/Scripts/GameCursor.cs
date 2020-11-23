@@ -44,10 +44,10 @@ public class GameCursor : MonoBehaviour
         {
             //dog.currTarget = dog.cursorTarget.transform;
             dog.isFollowingPlayer = false;
-            RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, 100f, layer);
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, Vector2.down, 100f, layer);
 
             if (ray.collider != null){
-                
+                Debug.Log(ray.point);
                 movePoint.transform.position = ray.point;
                 dog.currTarget = movePoint.transform;
                 
