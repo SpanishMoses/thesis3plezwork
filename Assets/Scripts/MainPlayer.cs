@@ -42,9 +42,9 @@ public class MainPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float translationHorz = player.GetAxis("MoveHorz") * speed;
+        /*float translationHorz = player.GetAxis("MoveHorz") * speed;
         translationHorz *= Time.deltaTime;
-        transform.Translate(translationHorz, 0, 0);
+        transform.Translate(translationHorz, 0, 0);*/
 
         if (player.GetButton("Jump") && canJump == true){
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -75,6 +75,12 @@ public class MainPlayer : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        float translationHorz = player.GetAxis("MoveHorz") * speed;
+        translationHorz *= Time.deltaTime;
+        transform.Translate(translationHorz, 0, 0);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

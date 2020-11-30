@@ -5,6 +5,9 @@ using UnityEngine;
 public class HumanSwitch : MonoBehaviour
 {
     public bool isEnabled;
+    public GameObject good;
+    public GameObject bad;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,10 @@ public class HumanSwitch : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             isEnabled = true;
+            good.SetActive(true);
+        }
+        if (collision.gameObject.tag == "Dog" && isEnabled == false){
+            bad.SetActive(true);
         }
     }
 
@@ -29,6 +36,11 @@ public class HumanSwitch : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             isEnabled = false;
+            good.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Dog" && isEnabled == false)
+        {
+            bad.SetActive(false);
         }
     }
 }
