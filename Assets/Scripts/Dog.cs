@@ -21,6 +21,10 @@ public class Dog : MonoBehaviour
 
     public Transform currTarget;
 
+    public Animator anim;
+    public SpriteRenderer sprite;
+    public bool moveRight;
+
     public float speed;
     public float nextWaypointDistance = 5f;
     public float spawnPoopTime;
@@ -114,6 +118,31 @@ public class Dog : MonoBehaviour
         if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
+        }
+
+        if (rb.velocity.x < 0)
+        {
+            moveRight = true;
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = false;
+        }
+        else if (rb.velocity.x > 0)
+        {
+            moveRight = false;
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = true;
+        }
+
+        if (rb.velocity.x == 0 && moveRight == true)
+        {
+            anim.SetFloat("Blend", 0);
+            sprite.flipX = false;
+        }
+
+        if (rb.velocity.x == 0 && moveRight == false)
+        {
+            anim.SetFloat("Blend", 0);
+            sprite.flipX = true;
         }
 
         if (rb.velocity.y < 0 || currTarget.position.x > 0)

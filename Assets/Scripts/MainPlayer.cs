@@ -10,11 +10,15 @@ public class MainPlayer : MonoBehaviour
     //throwing script help from https://www.youtube.com/watch?v=3DUmpVi82q8&t=176s&ab_channel=TheGameGuy
 
     public Dog dog;
-    
+
+    public Animator anim;
+    public SpriteRenderer sprite;
 
     public float speed;
 
     public Rigidbody2D rb;
+
+    public bool moveRight;
 
     //things for jump
     public bool canJump;
@@ -49,6 +53,7 @@ public class MainPlayer : MonoBehaviour
         if (player.GetButton("Jump") && canJump == true){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.velocity += Vector2.up * 7f;
+            anim.SetFloat("Blend", 2);
         }
 
         if (player.GetButton("ComeBack")){
@@ -62,6 +67,30 @@ public class MainPlayer : MonoBehaviour
 
         if (player.GetButton("DogAction") && dog.canBite == true && dog.startBite == false){
             dog.startBite = true;
+        }
+
+        if (player.GetAxis("MoveHorz") > 0 && canJump == true)
+        {
+            moveRight = true;
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = false;
+        }
+        else if (player.GetAxis("MoveHorz") < 0 && canJump == true)
+        {
+            moveRight = false;
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = true;
+        }
+
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true){
+            anim.SetFloat("Blend", 0);
+            sprite.flipX = false;
+        }
+
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true)
+        {
+            anim.SetFloat("Blend", 0);
+            sprite.flipX = true;
         }
 
         if (rb.velocity.y < 0){
@@ -80,6 +109,16 @@ public class MainPlayer : MonoBehaviour
         float translationHorz = player.GetAxis("MoveHorz") * speed;
         translationHorz *= Time.deltaTime;
         transform.Translate(translationHorz, 0, 0);
+
+        /*if (player.GetAxis("MoveHorz") > 0){
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = false;
+        } else
+        {
+            anim.SetFloat("Blend", 1);
+            sprite.flipX = true;
+        }*/
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
