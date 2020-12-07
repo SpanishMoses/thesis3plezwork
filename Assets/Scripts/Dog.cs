@@ -183,7 +183,7 @@ public class Dog : MonoBehaviour
             if (ray.collider == null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.velocity += Vector2.up * 14f;
+                rb.velocity += Vector2.up * 7f;
                 Debug.Log("erp");
             }
             /*RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);

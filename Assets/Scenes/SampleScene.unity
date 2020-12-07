@@ -292,7 +292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &102701520
 GameObject:
@@ -474,8 +474,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dog: {fileID: 180871892}
+  anim: {fileID: 0}
+  sprite: {fileID: 0}
   speed: 5
   rb: {fileID: 170757493}
+  moveRight: 0
   canJump: 0
   timeToHoldJump: 0
   maxTimeForJump: 0
@@ -737,6 +740,9 @@ MonoBehaviour:
   playerTarget: {fileID: 170757491}
   cursorTarget: {fileID: 1832591517}
   currTarget: {fileID: 170757496}
+  anim: {fileID: 0}
+  sprite: {fileID: 0}
+  moveRight: 0
   speed: 1200
   nextWaypointDistance: 1
   spawnPoopTime: 0
@@ -828,6 +834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!60 &188440126
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1062,7 +1070,7 @@ Transform:
   m_LocalScale: {x: 2.4487, y: 2.4487, z: 2.4487}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &226618429
 PolygonCollider2D:
@@ -1105,6 +1113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!1 &227122505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1482,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &336524537
 GameObject:
@@ -19973,6 +19983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!58 &1156112300
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20068,7 +20080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235686222
 GameObject:
@@ -20421,6 +20433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!1 &1266253638
 GameObject:
   m_ObjectHideFlags: 0
@@ -20503,7 +20517,7 @@ Transform:
   m_LocalScale: {x: 1.5265931, y: 1.5265931, z: 1.5265931}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1266253641
 MonoBehaviour:
@@ -21578,6 +21592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!60 &1495237904
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21949,7 +21965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610225990
 GameObject:
@@ -38851,13 +38867,13 @@ Transform:
   - {fileID: 1796862704}
   - {fileID: 1257735468}
   - {fileID: 1235686224}
+  - {fileID: 1266253640}
   - {fileID: 335070235}
   - {fileID: 1182548227}
   - {fileID: 226618428}
   - {fileID: 2111205962}
   - {fileID: 46618461}
   - {fileID: 1582789016}
-  - {fileID: 1266253640}
   - {fileID: 1987854923}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -38959,6 +38975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
+  good: {fileID: 0}
+  bad: {fileID: 0}
 --- !u!58 &1814914376
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -39780,7 +39798,7 @@ Transform:
   m_LocalScale: {x: 10.895625, y: 0.1407928, z: 1}
   m_Children: []
   m_Father: {fileID: 1805288331}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2111205963
 MonoBehaviour:
