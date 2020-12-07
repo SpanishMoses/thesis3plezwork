@@ -11,8 +11,10 @@ public class MainPlayer : MonoBehaviour
 
     public Dog dog;
 
-    public Animator anim;
-    public SpriteRenderer sprite;
+    public Animator topAnim;
+    public Animator lowAnim;
+    public SpriteRenderer topSprite;
+    public SpriteRenderer lowSprite;
 
     public float speed;
 
@@ -53,7 +55,7 @@ public class MainPlayer : MonoBehaviour
         if (player.GetButton("Jump") && canJump == true){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.velocity += Vector2.up * 7f;
-            anim.SetFloat("Blend", 2);
+            
         }
 
         if (player.GetButton("ComeBack")){
@@ -72,25 +74,33 @@ public class MainPlayer : MonoBehaviour
         if (player.GetAxis("MoveHorz") > 0 && canJump == true)
         {
             moveRight = true;
-            anim.SetFloat("Blend", 1);
-            sprite.flipX = false;
+            topAnim.SetFloat("Blend", 1);
+            lowAnim.SetFloat("Blend", 1);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
         }
         else if (player.GetAxis("MoveHorz") < 0 && canJump == true)
         {
             moveRight = false;
-            anim.SetFloat("Blend", 1);
-            sprite.flipX = true;
+            topAnim.SetFloat("Blend", 1);
+            lowAnim.SetFloat("Blend", 1);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
         }
 
         if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true){
-            anim.SetFloat("Blend", 0);
-            sprite.flipX = false;
+            topAnim.SetFloat("Blend", 0);
+            lowAnim.SetFloat("Blend", 0);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
         }
 
         if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true)
         {
-            anim.SetFloat("Blend", 0);
-            sprite.flipX = true;
+            topAnim.SetFloat("Blend", 0);
+            lowAnim.SetFloat("Blend", 0);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
         }
 
         if (rb.velocity.y < 0){
