@@ -259,11 +259,11 @@ public class Dog : MonoBehaviour
             gameObject.transform.parent = collision.gameObject.transform;
             //currTarget = transform;
         }
-        if (collision.gameObject.tag == "Floor")
+        /*if (collision.gameObject.tag == "Floor")
         {
             gameObject.transform.parent = collision.gameObject.transform;
 
-        }
+        }*/
         if (collision.gameObject.tag == "Key"){
             gotKey = true;
             keyText.SetActive(true);
@@ -271,14 +271,13 @@ public class Dog : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Platform")
         {
-            cursorPoint.transform.parent = null;
-            //currTarget = transform;
+            gameObject.transform.parent = null;
         }
-    }*/
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
