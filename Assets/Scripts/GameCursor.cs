@@ -17,6 +17,11 @@ public class GameCursor : MonoBehaviour
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
 
+    public SpriteRenderer sprite;
+
+    public Sprite nothing;
+    public Sprite pressed;
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -52,6 +57,15 @@ public class GameCursor : MonoBehaviour
                 dog.currTarget = movePoint.transform;
                 
             }
+        }
+
+        if (player.GetButtonDown("Interact")){
+            sprite.sprite = pressed;
+        }
+
+        if (player.GetButtonUp("Interact"))
+        {
+            sprite.sprite = nothing;
         }
     }
 
