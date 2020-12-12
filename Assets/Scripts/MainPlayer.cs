@@ -103,6 +103,16 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0)
+        {
+            topAnim.SetFloat("Blend", 2);
+        }
+
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0)
+        {
+            topAnim.SetFloat("Blend", 2);
+        }
+
         if (rb.velocity.y < 0){
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         } else if (rb.velocity.y > 0 && !player.GetButton("Jump"))

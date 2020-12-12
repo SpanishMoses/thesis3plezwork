@@ -14,6 +14,7 @@ public class AimShoot : MonoBehaviour
     public int numberOfPoints;
     public float force;
     Vector2 Direction;
+    public Animator topAnim;
 
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
@@ -52,6 +53,7 @@ void Update()
             {
                 Destroy(points[i]);
             }*/
+            //topAnim.SetFloat("Blend", 2);
             GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);
         snowballIns.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
