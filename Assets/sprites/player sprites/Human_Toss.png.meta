@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 2e4a628f5d10cfc458ba9b5f8e8fe932
+guid: 3a431d4c0d75b8c4bae8b5f74c47cf5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3762216910738581458
-    second: Human_Running_0
+      213: -3996345931490091008
+    second: Human_Toss_0
   - first:
-      213: 2263036993061901013
-    second: Human_Running_1
-  - first:
-      213: 2143973281095541305
-    second: Human_Running_2
-  - first:
-      213: -3795998597844796211
-    second: Human_Running_3
+      213: -3714570513336694485
+    second: Human_Toss_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Human_Running_0
+      name: Human_Toss_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,35 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d76a84e854163430800000000000000
-      internalID: 3762216910738581458
+      spriteID: 000a4f18c802a88c0800000000000000
+      internalID: -3996345931490091008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human_Running_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d2d505b72ce76f10800000000000000
-      internalID: 2263036993061901013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Human_Running_2
+      name: Human_Toss_1
       rect:
         serializedVersion: 2
         x: 0
@@ -169,29 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 932e0a3075ce0cd10800000000000000
-      internalID: 2143973281095541305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Human_Running_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcc74972367e15bc0800000000000000
-      internalID: -3795998597844796211
+      spriteID: b290d6b7cc1337cc0800000000000000
+      internalID: -3714570513336694485
       vertices: []
       indices: 
       edges: []
