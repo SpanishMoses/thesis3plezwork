@@ -16,7 +16,7 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * 10f;
+        rb.velocity = transform.up * 5f;
         StartCoroutine(enable());
     }
 

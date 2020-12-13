@@ -219,6 +219,7 @@ public class Dog : MonoBehaviour
     }
 
     IEnumerator begindig(){
+        anim.SetFloat("Blend", 2);
         yield return new WaitForSeconds(1);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
 

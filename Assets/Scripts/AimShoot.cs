@@ -53,7 +53,7 @@ void Update()
             {
                 Destroy(points[i]);
             }*/
-            //topAnim.SetFloat("Blend", 2);
+            topAnim.SetTrigger("Throw");
             GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);
         snowballIns.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }
