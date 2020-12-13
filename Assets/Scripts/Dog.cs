@@ -160,6 +160,7 @@ public class Dog : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
+                anim.SetFloat("Blend", 3);
                 Debug.Log("erp");
             }
         } else if (rb.velocity.x < 0 && isGrounded == true){
@@ -168,6 +169,7 @@ public class Dog : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
+                anim.SetFloat("Blend", 3);
                 Debug.Log("erp");
             }
         }
@@ -177,6 +179,10 @@ public class Dog : MonoBehaviour
             rb.AddForce(Vector2.up * 400f);
         }*/
 
+        if (isGrounded == false){
+            anim.SetFloat("Blend", 3);
+        }
+
         if (isGrounded == true)
         {
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
@@ -184,6 +190,7 @@ public class Dog : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 7f;
+                anim.SetFloat("Blend", 3);
                 Debug.Log("erp");
             }
             /*RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);

@@ -22,6 +22,8 @@ public class MainPlayer : MonoBehaviour
 
     public bool moveRight;
 
+    public bool pushing;
+
     //things for jump
     public bool canJump;
     public float timeToHoldJump;
@@ -71,7 +73,7 @@ public class MainPlayer : MonoBehaviour
             dog.startBite = true;
         }
 
-        if (player.GetAxis("MoveHorz") > 0 && canJump == true)
+        if (player.GetAxis("MoveHorz") > 0 && canJump == true && pushing == false)
         {
             moveRight = true;
             topAnim.SetFloat("Blend", 1);
@@ -79,7 +81,7 @@ public class MainPlayer : MonoBehaviour
             topSprite.flipX = false;
             lowSprite.flipX = false;
         }
-        else if (player.GetAxis("MoveHorz") < 0 && canJump == true)
+        else if (player.GetAxis("MoveHorz") < 0 && canJump == true && pushing == false)
         {
             moveRight = false;
             topAnim.SetFloat("Blend", 1);
@@ -88,14 +90,15 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true){
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false)
+        {
             topAnim.SetFloat("Blend", 0);
             lowAnim.SetFloat("Blend", 0);
             topSprite.flipX = false;
             lowSprite.flipX = false;
         }
 
-        if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true)
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
         {
             topAnim.SetFloat("Blend", 0);
             lowAnim.SetFloat("Blend", 0);
@@ -103,16 +106,16 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0)
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0 && pushing == false)
+        {
+            topAnim.SetFloat("Blend", 2);
+            lowAnim.SetFloat("Blend", 2);
+        }
+
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0 && pushing == false)
         {
             topAnim.SetFloat("Blend", 3);
             lowAnim.SetFloat("Blend", 3);
-        }
-
-        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0)
-        {
-            topAnim.SetFloat("Blend", 4);
-            lowAnim.SetFloat("Blend", 4);
         }
 
         if (rb.velocity.y < 0){
@@ -123,6 +126,11 @@ public class MainPlayer : MonoBehaviour
         }
 
         canJump = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+
+        if (pushing == true && canJump == true){
+            topAnim.SetFloat("Blend", 4);
+            lowAnim.SetFloat("Blend", 4);
+        }
 
     }
 
@@ -157,6 +165,31 @@ public class MainPlayer : MonoBehaviour
             gotKey = true;
             keyText.SetActive(true);
             Destroy(collision.gameObject);
+        }
+        /*if (collision.gameObject.tag == "Block"){
+            Debug.Log("yes");
+            topAnim.SetFloat("Blend", 4);
+            lowAnim.SetFloat("Blend", 4);
+        }*/
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Block")
+        {
+            pushing = true;
+            Debug.Log("yes");
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Block")
+        {
+            pushing = false;
+            Debug.Log("yes");
+
         }
     }
 }

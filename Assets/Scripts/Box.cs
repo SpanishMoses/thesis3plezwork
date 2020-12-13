@@ -32,6 +32,7 @@ public class Box : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             canPush = true;
+            
         }
 
         if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog"){

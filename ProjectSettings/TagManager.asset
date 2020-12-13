@@ -13,6 +13,7 @@ TagManager:
   - Key
   - Point
   - Snow
+  - Block
   layers:
   - Default
   - TransparentFX
