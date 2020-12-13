@@ -105,12 +105,14 @@ public class MainPlayer : MonoBehaviour
 
         if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0)
         {
-            topAnim.SetFloat("Blend", 2);
+            topAnim.SetFloat("Blend", 3);
+            lowAnim.SetFloat("Blend", 3);
         }
 
         if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0)
         {
-            topAnim.SetFloat("Blend", 2);
+            topAnim.SetFloat("Blend", 4);
+            lowAnim.SetFloat("Blend", 4);
         }
 
         if (rb.velocity.y < 0){
