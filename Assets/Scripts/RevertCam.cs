@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class RevertCam : MonoBehaviour
 {
+    public CameraManager mainCam;
     public GameObject cursor;
     public GameObject playerCam;
     public GameObject puzzleCam;
+
+    public bool playerCrossed;
+    public bool dogCrossed;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +21,26 @@ public class RevertCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (playerCrossed == true && dogCrossed == true)
+        {
+            playerCam.SetActive(true);
+            puzzleCam.SetActive(false);
+            cursor.transform.parent = puzzleCam.gameObject.transform;
+            mainCam.cam = playerCam;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerCam.SetActive(true);
-            puzzleCam.SetActive(false);
-            cursor.transform.parent = playerCam.gameObject.transform;
+            playerCrossed = true;
+        }
+
+        if (collision.gameObject.tag == "Dog")
+        {
+            dogCrossed = true;
         }
     }
 }

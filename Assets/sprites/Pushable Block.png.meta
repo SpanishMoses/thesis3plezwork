@@ -1,7 +1,112 @@
 fileFormatVersion: 2
-guid: bed11d4e986bb9243808fcc3d9089b11
+guid: f665b433bf4ef8847bee182cdebb0040
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8798071723620282361
+    second: Pushable Block_0
+  - first:
+      213: -6952146222399324383
+    second: Pushable Block_1
+  - first:
+      213: 3598829723134329442
+    second: Pushable Block_2
+  - first:
+      213: -1927452374862836842
+    second: Pushable Block_3
+  - first:
+      213: 3276290760573190957
+    second: Pushable Block_4
+  - first:
+      213: 5876093516730810188
+    second: Pushable Block_5
+  - first:
+      213: -5917243209613723309
+    second: Pushable Block_6
+  - first:
+      213: -1522633126220875148
+    second: Pushable Block_7
+  - first:
+      213: -5728724313117132548
+    second: Pushable Block_8
+  - first:
+      213: -2228727514122448685
+    second: Pushable Block_9
+  - first:
+      213: 5524222231042320317
+    second: Pushable Block_10
+  - first:
+      213: -6028783030543450250
+    second: Pushable Block_11
+  - first:
+      213: -3284133619295634933
+    second: Pushable Block_12
+  - first:
+      213: -4836951872035759106
+    second: Pushable Block_13
+  - first:
+      213: 8678231694832392004
+    second: Pushable Block_14
+  - first:
+      213: 6131879708206313632
+    second: Pushable Block_15
+  - first:
+      213: 6116504363647440479
+    second: Pushable Block_16
+  - first:
+      213: 3093617968321166240
+    second: Pushable Block_17
+  - first:
+      213: 3773300554504914090
+    second: Pushable Block_18
+  - first:
+      213: -4484548058185510286
+    second: Pushable Block_19
+  - first:
+      213: 3105154699261993735
+    second: Pushable Block_20
+  - first:
+      213: -5517106511653302018
+    second: Pushable Block_21
+  - first:
+      213: 1103089283088992592
+    second: Pushable Block_22
+  - first:
+      213: 8103604322668427816
+    second: Pushable Block_23
+  - first:
+      213: -5002413765739292422
+    second: Pushable Block_24
+  - first:
+      213: 1276071230987702935
+    second: Pushable Block_25
+  - first:
+      213: -3832020345396620815
+    second: Pushable Block_26
+  - first:
+      213: -2435824888937192435
+    second: Pushable Block_27
+  - first:
+      213: 2515081520539893289
+    second: Pushable Block_28
+  - first:
+      213: -1911504072856234222
+    second: Pushable Block_29
+  - first:
+      213: 103997567697752964
+    second: Pushable Block_30
+  - first:
+      213: -6547307714810804134
+    second: Pushable Block_31
+  - first:
+      213: 1941697604864183126
+    second: Pushable Block_32
+  - first:
+      213: 6887333834520468602
+    second: Pushable Block_33
+  - first:
+      213: -5853290967755824342
+    second: Pushable Block_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +146,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0

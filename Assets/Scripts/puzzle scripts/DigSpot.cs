@@ -6,6 +6,8 @@ public class DigSpot : MonoBehaviour
 {
     public bool dug;
     public GameObject obj;
+    public SpriteRenderer rend;
+    public Sprite sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,9 @@ public class DigSpot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (dug == true){
+            rend.sprite = sprite;
+        }
     }
 
     public void spawn(){
