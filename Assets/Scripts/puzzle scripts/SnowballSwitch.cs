@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnowballSwitch : MonoBehaviour
 {
-
+    public SnowDoor door;
     public bool isEnabled;
     public SpriteRenderer rend;
     public Sprite on;
@@ -17,6 +17,7 @@ public class SnowballSwitch : MonoBehaviour
             anim.enabled = false;
             isEnabled = true;
             rend.sprite = on;
+            door.switchNum++;
         }
     }
 }
