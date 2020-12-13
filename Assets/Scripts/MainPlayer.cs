@@ -57,12 +57,13 @@ public class MainPlayer : MonoBehaviour
         if (player.GetButton("Jump") && canJump == true){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.velocity += Vector2.up * 7f;
-            
         }
 
         if (player.GetButton("ComeBack")){
             dog.currTarget = dog.playerTarget.transform;
             dog.isFollowingPlayer = true;
+            topAnim.SetFloat("Blend", 5);
+            lowAnim.SetFloat("Blend", 5);
         }
 
         if (player.GetButton("DogAction") && dog.canDig == true && dog.startDig == false){
@@ -132,6 +133,27 @@ public class MainPlayer : MonoBehaviour
             lowAnim.SetFloat("Blend", 4);
         }
 
+        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") == 0 && pushing == false){
+            topAnim.SetFloat("Blend", 5);
+            lowAnim.SetFloat("Blend", 5);
+        }
+
+        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Interact") && player.GetAxis("MoveHorz") > 0 && pushing == false){
+            topAnim.SetFloat("Blend", 6);
+            lowAnim.SetFloat("Blend", 6);
+        }
+
+        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") == 0 && pushing == false)
+        {
+            topAnim.SetFloat("Blend", 5);
+            lowAnim.SetFloat("Blend", 5);
+        }
+
+        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("ComeBack") && player.GetAxis("MoveHorz") > 0 && pushing == false)
+        {
+            topAnim.SetFloat("Blend", 6);
+            lowAnim.SetFloat("Blend", 6);
+        }
     }
 
     private void FixedUpdate()
