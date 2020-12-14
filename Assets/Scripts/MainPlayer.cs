@@ -59,6 +59,28 @@ public class MainPlayer : MonoBehaviour
             rb.velocity += Vector2.up * 7f;
         }
 
+        if (player.GetButton("Jump") && canJump == false)
+        {
+            topAnim.SetFloat("Blend", 7);
+            lowAnim.SetFloat("Blend", 7);
+        }
+
+        if (canJump == false && player.GetAxis("MoveHorz") > 0)
+        {
+            topAnim.SetFloat("Blend", 7);
+            lowAnim.SetFloat("Blend", 7);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
+        }
+
+        if (canJump == false && player.GetAxis("MoveHorz") < 0)
+        {
+            topAnim.SetFloat("Blend", 7);
+            lowAnim.SetFloat("Blend", 7);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
+        }
+
         if (player.GetButton("ComeBack")){
             dog.currTarget = dog.playerTarget.transform;
             dog.isFollowingPlayer = true;

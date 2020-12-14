@@ -1,19 +1,37 @@
 fileFormatVersion: 2
-guid: 38c64e94366261143a03b912c60a0a93
+guid: a1e0245f1a4830640b8e68cc2f1fa326
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2835307333494006589
-    second: Block Push_0
+      213: 1010749227919839670
+    second: Human Tired_0
   - first:
-      213: 1809468019831290054
-    second: Block Push_1
+      213: -1518614604582175722
+    second: Human Tired_1
   - first:
-      213: -6852111465822069096
-    second: Block Push_2
+      213: 2205408232292971993
+    second: Human Tired_2
   - first:
-      213: 270165704604592140
-    second: Block Push_3
+      213: -8787690198165107447
+    second: Human Tired_3
+  - first:
+      213: 62662305578358805
+    second: Human Tired_4
+  - first:
+      213: -1107808950148374520
+    second: Human Tired_5
+  - first:
+      213: 6497080154279378919
+    second: Human Tired_6
+  - first:
+      213: -719273561609390579
+    second: Human Tired_7
+  - first:
+      213: -4745609016309243157
+    second: Human Tired_8
+  - first:
+      213: -3408426515605500163
+    second: Human Tired_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +131,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block Push_0
+      name: Human Tired_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1992f4117e60e00800000000000000
+      internalID: 1010749227919839670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cb827201ccceae0800000000000000
+      internalID: -1518614604582175722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d57b8e3a1f2b9e10800000000000000
+      internalID: 2205408232292971993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dcf2ee25adb0680800000000000000
+      internalID: -8787690198165107447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5181ec0f80f9ed000800000000000000
+      internalID: 62662305578358805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800686711a540a0f0800000000000000
+      internalID: -1107808950148374520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_6
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3368f96ff8095720800000000000000
-      internalID: 2835307333494006589
+      spriteID: 7efff013af34a2a50800000000000000
+      internalID: 6497080154279378919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block Push_1
+      name: Human Tired_7
       rect:
         serializedVersion: 2
         x: 32
@@ -148,14 +292,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c8397ab3958c1910800000000000000
-      internalID: 1809468019831290054
+      spriteID: d0631ffa180a406f0800000000000000
+      internalID: -719273561609390579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block Push_2
+      name: Human Tired_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be22ff33eb5342eb0800000000000000
+      internalID: -4745609016309243157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Tired_9
       rect:
         serializedVersion: 2
         x: 0
@@ -169,29 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89e5b460de868e0a0800000000000000
-      internalID: -6852111465822069096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Block Push_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c082375e642dfb300800000000000000
-      internalID: 270165704604592140
+      spriteID: dfecf468426d2b0d0800000000000000
+      internalID: -3408426515605500163
       vertices: []
       indices: 
       edges: []
