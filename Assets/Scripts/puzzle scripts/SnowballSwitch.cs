@@ -12,7 +12,7 @@ public class SnowballSwitch : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Snow"){
+        if (collision.gameObject.tag == "Snow" && isEnabled == false){
             Debug.Log("hit");
             anim.enabled = false;
             isEnabled = true;

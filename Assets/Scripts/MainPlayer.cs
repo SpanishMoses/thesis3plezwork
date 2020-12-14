@@ -176,7 +176,13 @@ public class MainPlayer : MonoBehaviour
             topAnim.SetFloat("Blend", 6);
             lowAnim.SetFloat("Blend", 6);
         }
+
+        if (gotKey == false)
+        {
+            keyText.SetActive(false);
+        }
     }
+
 
     private void FixedUpdate()
     {

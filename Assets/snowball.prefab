@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5866224901323338495}
   - component: {fileID: -7968677282695112172}
   - component: {fileID: 158358169226838266}
-  - component: {fileID: -3589061336858995614}
+  - component: {fileID: -2287260917899159971}
   m_Layer: 13
   m_Name: snowball
   m_TagString: Snow
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-3589061336858995614
+--- !u!114 &-2287260917899159971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +131,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6920448485614429787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f658ed8e90ff964591bb21961c272d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cc1b74e6684f974e98bd203b3077ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ElevatorDogSwitch : MonoBehaviour
 {
+    public Sprite normal;
+    public Sprite touched;
+    public SpriteRenderer rend;
     public bool Move;
 
     // Start is called before the first frame update
@@ -15,7 +18,14 @@ public class ElevatorDogSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Move == true)
+        {
+            rend.sprite = touched;
+        }
+        if (Move == false)
+        {
+            rend.sprite = normal;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

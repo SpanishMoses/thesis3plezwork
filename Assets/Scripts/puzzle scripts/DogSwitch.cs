@@ -7,6 +7,9 @@ public class DogSwitch : MonoBehaviour
     public bool isEnabled;
     public GameObject good;
     public GameObject bad;
+    public Sprite normal;
+    public Sprite touched;
+    public SpriteRenderer rend;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,12 @@ public class DogSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isEnabled == false){
+            rend.sprite = touched;
+        }
+        if (isEnabled == true){
+            rend.sprite = normal;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

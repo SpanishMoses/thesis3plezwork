@@ -222,7 +222,9 @@ public class Dog : MonoBehaviour
             StartCoroutine(beginbite());
         }
 
-        
+        if (gotKey == false){
+            keyText.SetActive(false);
+        }
     }
 
     IEnumerator begindig(){
