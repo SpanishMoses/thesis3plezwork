@@ -6,6 +6,7 @@ public class KeyDoor : MonoBehaviour
 {
 
     public GameObject door;
+    public AudioSource openNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +26,21 @@ public class KeyDoor : MonoBehaviour
             MainPlayer main = collision.transform.GetComponent<MainPlayer>();
             if (main.gotKey == true){
                 main.gotKey = false;
-                door.SetActive(false);
+                StartCoroutine(open());
             }
         }
         if (collision.gameObject.tag == "Dog"){
             Dog dog = collision.transform.GetComponent<Dog>();
             if (dog.gotKey == true){
                 dog.gotKey = false;
-                door.SetActive(false);
+                StartCoroutine(open());
             }
         }
+    }
+
+    IEnumerator open(){
+        openNoise.Play();
+        yield return new WaitForSeconds(1f);
+        door.SetActive(false);
     }
 }

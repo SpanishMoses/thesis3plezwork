@@ -40,6 +40,10 @@ public class MainPlayer : MonoBehaviour
     public bool gotKey;
     public GameObject keyText;
 
+    public AudioSource noise;
+    public AudioClip commandSound;
+    public AudioClip jumpSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,12 +59,15 @@ public class MainPlayer : MonoBehaviour
         transform.Translate(translationHorz, 0, 0);*/
 
         if (player.GetButton("Jump") && canJump == true){
+            noise.clip = jumpSound;
+            noise.Play();
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.velocity += Vector2.up * 7f;
         }
 
         if (player.GetButton("Jump") && canJump == false)
         {
+
             topAnim.SetFloat("Blend", 7);
             lowAnim.SetFloat("Blend", 7);
         }

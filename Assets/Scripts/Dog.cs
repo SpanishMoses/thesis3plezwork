@@ -63,6 +63,9 @@ public class Dog : MonoBehaviour
     public bool gotKey;
     public GameObject keyText;
 
+    public AudioSource noise;
+    public AudioClip keyNoise;
+
     //public Animator anim;
 
 
@@ -120,29 +123,29 @@ public class Dog : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (rb.velocity.x < 0)
+        if (rb.velocity.x < 0.1f)
         {
             moveRight = true;
             anim.SetFloat("Blend", 1);
             sprite.flipX = false;
         }
-        else if (rb.velocity.x > 0)
+        else if (rb.velocity.x > 0.1f)
         {
             moveRight = false;
             anim.SetFloat("Blend", 1);
             sprite.flipX = true;
         }
 
-        if (rb.velocity.x == 0 && moveRight == true)
-        {
-            anim.SetFloat("Blend", 0);
-            sprite.flipX = false;
-        }
-
-        if (rb.velocity.x == 0 && moveRight == false)
+        if (rb.velocity.x >= 0 && moveRight == true)
         {
             anim.SetFloat("Blend", 0);
             sprite.flipX = true;
+        }
+
+        if (rb.velocity.x <= 0 && moveRight == false)
+        {
+            anim.SetFloat("Blend", 0);
+            sprite.flipX = false;
         }
 
         if (rb.velocity.y < 0 || currTarget.position.x > 0)
@@ -277,6 +280,8 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Key"){
             gotKey = true;
             keyText.SetActive(true);
+            noise.clip = keyNoise;
+            noise.Play();
             Destroy(collision.gameObject);
         }
     }
