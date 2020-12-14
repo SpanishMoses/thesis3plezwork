@@ -24,6 +24,8 @@ public class MainPlayer : MonoBehaviour
 
     public bool pushing;
 
+    public bool follow;
+
     //things for jump
     public bool canJump;
     public float timeToHoldJump;
@@ -160,6 +162,14 @@ public class MainPlayer : MonoBehaviour
         if (pushing == true && canJump == true){
             topAnim.SetFloat("Blend", 4);
             lowAnim.SetFloat("Blend", 4);
+        }
+
+        if (player.GetButton("Interact")){
+            follow = false;
+        }
+
+        if (player.GetButton("ComeBack")){
+            follow = true;
         }
 
         if (player.GetButton("Interact") && player.GetAxis("MoveHorz") == 0 && pushing == false){

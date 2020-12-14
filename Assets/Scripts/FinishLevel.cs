@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SwitchCam : MonoBehaviour
+public class FinishLevel : MonoBehaviour
 {
-    public GameObject Cursor;
-    public GameObject playerCam;
-    public GameObject puzzleCam;
+    public GameObject finishedLogo;
+    public GameObject fade;
+
+    public AudioSource mus;
+    public AudioClip cheerMus;
 
     public bool playerCrossed;
     public bool dogCrossed;
+
+    public float time;
+    public float maxTime;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +28,12 @@ public class SwitchCam : MonoBehaviour
     void Update()
     {
         if (playerCrossed == true && dogCrossed == true){
-            playerCam.SetActive(false);
-            puzzleCam.SetActive(true);
-            Cursor.transform.parent = puzzleCam.gameObject.transform;
-            Destroy(gameObject, 10f);
+            mus.clip = cheerMus;
+            finishedLogo.SetActive(true);
+            time += Time.deltaTime;
+            if (time >= maxTime){
+                fade.SetActive(true);
+            }
         }
     }
 
@@ -35,7 +44,8 @@ public class SwitchCam : MonoBehaviour
             playerCrossed = true;
         }
 
-        if (collision.gameObject.tag == "Dog"){
+        if (collision.gameObject.tag == "Dog")
+        {
             dogCrossed = true;
         }
     }

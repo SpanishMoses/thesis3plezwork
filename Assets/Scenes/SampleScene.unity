@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37796692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 197.8, y: 8.5, z: -10}
+  m_LocalPosition: {x: 28, y: -0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1466971754}
@@ -224,6 +224,8 @@ MonoBehaviour:
   cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 2140145887}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &39565971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -474,11 +476,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dog: {fileID: 180871892}
-  anim: {fileID: 0}
-  sprite: {fileID: 0}
+  topAnim: {fileID: 0}
+  lowAnim: {fileID: 0}
+  topSprite: {fileID: 0}
+  lowSprite: {fileID: 0}
   speed: 5
   rb: {fileID: 170757493}
   moveRight: 0
+  pushing: 0
+  follow: 0
   canJump: 0
   timeToHoldJump: 0
   maxTimeForJump: 0
@@ -492,6 +498,9 @@ MonoBehaviour:
   playerID: 0
   gotKey: 0
   keyText: {fileID: 843958483}
+  noise: {fileID: 0}
+  commandSound: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!212 &170757495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -551,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170757491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 197.8, y: 8.5, z: 0}
+  m_LocalPosition: {x: 28, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1308612107}
@@ -640,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180871886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 199.97, y: 7.564643, z: 0}
+  m_LocalPosition: {x: 30.169998, y: -1.8353567, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1479756864}
@@ -772,6 +781,8 @@ MonoBehaviour:
   startBite: 0
   gotKey: 0
   keyText: {fileID: 934790859}
+  noise: {fileID: 0}
+  keyNoise: {fileID: 0}
 --- !u!58 &180871893
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -836,6 +847,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!60 &188440126
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -948,6 +962,8 @@ MonoBehaviour:
   Cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 348004012}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &189848255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1115,6 +1131,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!1 &227122505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dug: 0
   obj: {fileID: 5491260624228500938, guid: 7d8b4e9ffaf2b214e94f2652adaf9775, type: 3}
+  rend: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!212 &302650578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2091,6 +2112,8 @@ MonoBehaviour:
   Cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 2140145887}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &422660268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2270,6 +2293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8aab24b67e3e7c42a8a5272d532fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
   Move: 0
 --- !u!58 &438215445
 CircleCollider2D:
@@ -2577,7 +2603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 197.8, y: 8.5, z: -10}
+  m_LocalPosition: {x: 28, y: -0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2688,6 +2714,8 @@ MonoBehaviour:
   cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 2140145887}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &553939077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18478,6 +18506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8aab24b67e3e7c42a8a5272d532fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
   Move: 0
 --- !u!58 &795098884
 CircleCollider2D:
@@ -18835,6 +18866,8 @@ MonoBehaviour:
   cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 1863310795}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &845708974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18949,6 +18982,7 @@ MonoBehaviour:
   door: {fileID: 887489720}
   hum: {fileID: 1156112299}
   dog: {fileID: 188440125}
+  openNoise: {fileID: 0}
 --- !u!212 &887489724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19317,6 +19351,8 @@ MonoBehaviour:
   cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 2140145887}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &955596997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19897,6 +19933,8 @@ MonoBehaviour:
   Cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 1863310795}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &1124123900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19985,6 +20023,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!58 &1156112300
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20435,6 +20476,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!1 &1266253638
 GameObject:
   m_ObjectHideFlags: 0
@@ -20531,6 +20575,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f8b1c21b95fad4d8cd342c9a861679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
   Move: 0
 --- !u!60 &1266253642
 PolygonCollider2D:
@@ -21280,6 +21327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1485618752}
+  openNoise: {fileID: 0}
 --- !u!61 &1485618756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21469,6 +21517,7 @@ MonoBehaviour:
   door: {fileID: 1494067974}
   hum: {fileID: 1814914375}
   dog: {fileID: 1495237903}
+  openNoise: {fileID: 0}
 --- !u!61 &1494067978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21594,6 +21643,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!60 &1495237904
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -37706,6 +37758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dug: 0
   obj: {fileID: 4818855360881356901, guid: 248fbe71d4bd1dc44af528e4efade954, type: 3}
+  rend: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!1 &1723173427
 GameObject:
   m_ObjectHideFlags: 0
@@ -38664,6 +38718,7 @@ MonoBehaviour:
   door: {fileID: 1796862702}
   hum: {fileID: 1257735470}
   dog: {fileID: 226618430}
+  openNoise: {fileID: 0}
 --- !u!61 &1796862706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38977,6 +39032,9 @@ MonoBehaviour:
   isEnabled: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!58 &1814914376
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -39032,6 +39090,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   playerID: 0
+  sprite: {fileID: 0}
+  nothing: {fileID: 0}
+  pressed: {fileID: 0}
 --- !u!212 &1832591519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39291,6 +39352,7 @@ MonoBehaviour:
   launchForce: 20
   numberOfPoints: 5
   force: 20
+  topAnim: {fileID: 0}
   playerID: 0
 --- !u!1 &1987854921
 GameObject:
@@ -39388,6 +39450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8aab24b67e3e7c42a8a5272d532fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
   Move: 0
 --- !u!58 &1987854925
 CircleCollider2D:
@@ -39436,6 +39501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8aab24b67e3e7c42a8a5272d532fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  touched: {fileID: 0}
+  rend: {fileID: 0}
   Move: 0
 --- !u!58 &2006762949
 CircleCollider2D:
@@ -39982,6 +40050,8 @@ MonoBehaviour:
   Cursor: {fileID: 1832591517}
   playerCam: {fileID: 37796692}
   puzzleCam: {fileID: 102701520}
+  playerCrossed: 0
+  dogCrossed: 0
 --- !u!61 &2144112005
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/controls.unity
     guid: 0f7cb9f2c9b51db4eaea1a829c0728b9
+  - enabled: 1
+    path: Assets/Scenes/vertical cutscene.unity
+    guid: be77c4c21f0789b4a9695e65240d839b
   m_configObjects: {}
