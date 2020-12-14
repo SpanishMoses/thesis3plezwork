@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainPlayer : MonoBehaviour
 {
@@ -197,6 +198,10 @@ public class MainPlayer : MonoBehaviour
         if (gotKey == false)
         {
             keyText.SetActive(false);
+        }
+
+        if (player.GetButton("Restart")){
+            SceneManager.LoadScene("vertical slice");
         }
     }
 

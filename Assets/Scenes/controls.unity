@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: -17}
-  m_SizeDelta: {x: 366.4, y: 217.8}
+  m_AnchoredPosition: {x: -201, y: 38.201}
+  m_SizeDelta: {x: 366.4, y: 201.59822}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &246998559
 MonoBehaviour:
@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d04366ed6fd3e9a4a867a07f28d48c58, type: 3}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -212,7 +212,10 @@ MonoBehaviour:
     R2-
     throw snowball, aim with cursor
 
-    Move next to blocks to push them'
+    L2 - Restart level
+
+    Move next to blocks
+    to push them'
 --- !u!222 &246998560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -301,6 +304,86 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373220251}
+  m_CullTransparentMesh: 0
+--- !u!1 &379598396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379598397}
+  - component: {fileID: 379598399}
+  - component: {fileID: 379598398}
+  m_Layer: 5
+  m_Name: Text (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &379598397
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379598396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 673961378}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000013351, y: -108.08}
+  m_SizeDelta: {x: 366.4, y: 71.440994}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &379598398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379598396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d04366ed6fd3e9a4a867a07f28d48c58, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 97
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Hints - Both the human and dog need to be at the exit of the puzzle to
+    progress. The dog also cant jump off huge cliffs so make sure you help him down!
+--- !u!222 &379598399
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379598396}
   m_CullTransparentMesh: 0
 --- !u!1 &399665207
 GameObject:
@@ -419,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 156}
-  m_SizeDelta: {x: 611, y: 114}
+  m_AnchoredPosition: {x: -8, y: 180.86}
+  m_SizeDelta: {x: 611, y: 83.72032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661751714
 MonoBehaviour:
@@ -444,7 +527,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d04366ed6fd3e9a4a867a07f28d48c58, type: 3}
-    m_FontSize: 79
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -500,6 +583,7 @@ RectTransform:
   - {fileID: 1815292288}
   - {fileID: 246998558}
   - {fileID: 1091955004}
+  - {fileID: 379598397}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -685,8 +769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182, y: -17}
-  m_SizeDelta: {x: 366.4, y: 217.8}
+  m_AnchoredPosition: {x: 183.2, y: 38.2}
+  m_SizeDelta: {x: 366.4, y: 201.5967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091955005
 MonoBehaviour:
@@ -710,7 +794,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d04366ed6fd3e9a4a867a07f28d48c58, type: 3}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -739,6 +823,8 @@ MonoBehaviour:
 
     E - throw snowball,
     aim with cursor
+
+    P - restart level
 
     Move next to blocks to push them'
 --- !u!222 &1091955006
