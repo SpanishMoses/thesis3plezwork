@@ -8,7 +8,7 @@ public class DoorOpen : MonoBehaviour
     public HumanSwitch hum;
     public DogSwitch dog;
 
-    public AudioSource openNoise;
+    public GameObject noise;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,13 @@ public class DoorOpen : MonoBehaviour
     void Update()
     {
         if (hum.isEnabled == true && dog.isEnabled == true){
+            noise.SetActive(true);
             StartCoroutine(open());
         }
     }
 
     IEnumerator open(){
-        openNoise.Play();
+        
         yield return new WaitForSeconds(1f);
         door.SetActive(false);
     }

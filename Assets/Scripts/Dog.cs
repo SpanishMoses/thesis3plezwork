@@ -284,6 +284,10 @@ public class Dog : MonoBehaviour
             noise.Play();
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Floor")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

@@ -1397,7 +1397,14 @@ MonoBehaviour:
   m_Text: 'Christopher Ortiz - Lead Programmer
 
     Nikolas Fiore - Lead Artist,
-    lead Level Designer'
+    lead Level Designer
+
+    Komiku - Music (https://www.freemusicarchive.org/music/Komiku)
+
+    Font
+    - Alessia
+
+'
 --- !u!222 &1707515087
 CanvasRenderer:
   m_ObjectHideFlags: 0

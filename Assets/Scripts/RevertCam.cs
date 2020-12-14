@@ -26,7 +26,7 @@ public class RevertCam : MonoBehaviour
             playerCam.SetActive(true);
             puzzleCam.SetActive(false);
             cursor.transform.parent = playerCam.gameObject.transform;
-            Destroy(gameObject, 10f);
+            Destroy(gameObject, 3f);
         }
     }
 

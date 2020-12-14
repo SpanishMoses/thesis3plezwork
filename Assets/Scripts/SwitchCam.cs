@@ -24,7 +24,7 @@ public class SwitchCam : MonoBehaviour
             playerCam.SetActive(false);
             puzzleCam.SetActive(true);
             Cursor.transform.parent = puzzleCam.gameObject.transform;
-            Destroy(gameObject, 10f);
+            Destroy(gameObject, 3f);
         }
     }
 
