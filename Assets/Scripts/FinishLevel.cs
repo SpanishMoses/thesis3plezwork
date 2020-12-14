@@ -29,6 +29,7 @@ public class FinishLevel : MonoBehaviour
     {
         if (playerCrossed == true && dogCrossed == true){
             mus.clip = cheerMus;
+            mus.Play();
             finishedLogo.SetActive(true);
             time += Time.deltaTime;
             if (time >= maxTime){
