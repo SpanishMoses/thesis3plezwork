@@ -9,6 +9,10 @@ public class ElevatorDogSwitch : MonoBehaviour
     public SpriteRenderer rend;
     public bool Move;
 
+    public AudioSource noise;
+    public AudioClip switchOn;
+    public AudioClip switchOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,8 @@ public class ElevatorDogSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Dog")
         {
             Move = true;
+            noise.clip = switchOn;
+            noise.Play();
         }
     }
 
@@ -49,6 +55,8 @@ public class ElevatorDogSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Dog")
         {
             Move = false;
+            noise.clip = switchOff;
+            noise.Play();
         }
     }
 }

@@ -11,6 +11,10 @@ public class HumanSwitch : MonoBehaviour
     public Sprite touched;
     public SpriteRenderer rend;
 
+    public AudioSource noise;
+    public AudioClip switchOn;
+    public AudioClip switchOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +39,8 @@ public class HumanSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Player"){
             isEnabled = true;
             good.SetActive(true);
+            noise.clip = switchOn;
+            noise.Play();
         }
         if (collision.gameObject.tag == "Dog" && isEnabled == false){
             bad.SetActive(true);
@@ -46,6 +52,8 @@ public class HumanSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Player"){
             isEnabled = false;
             good.SetActive(false);
+            noise.clip = switchOff;
+            noise.Play();
         }
         if (collision.gameObject.tag == "Dog" && isEnabled == false)
         {

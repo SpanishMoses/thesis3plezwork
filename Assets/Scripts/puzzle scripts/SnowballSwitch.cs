@@ -10,6 +10,8 @@ public class SnowballSwitch : MonoBehaviour
     public Sprite on;
     public Animator anim;
 
+    public AudioSource sound;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Snow" && isEnabled == false){
@@ -18,6 +20,7 @@ public class SnowballSwitch : MonoBehaviour
             isEnabled = true;
             rend.sprite = on;
             door.switchNum++;
+            sound.Play();
         }
     }
 }

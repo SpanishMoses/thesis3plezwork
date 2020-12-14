@@ -9,7 +9,8 @@ public class FinishLevel : MonoBehaviour
     public GameObject finishedLogo;
     public GameObject fade;
 
-    public AudioSource mus;
+    public GameObject mus1;
+    public GameObject mus2;
     public AudioClip cheerMus;
 
     public bool playerCrossed;
@@ -28,8 +29,8 @@ public class FinishLevel : MonoBehaviour
     void Update()
     {
         if (playerCrossed == true && dogCrossed == true){
-            mus.clip = cheerMus;
-            mus.Play();
+            mus1.SetActive(false);
+            mus2.SetActive(true);
             finishedLogo.SetActive(true);
             time += Time.deltaTime;
             if (time >= maxTime){

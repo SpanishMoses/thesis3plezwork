@@ -11,6 +11,10 @@ public class DogSwitch : MonoBehaviour
     public Sprite touched;
     public SpriteRenderer rend;
 
+    public AudioSource noise;
+    public AudioClip switchOn;
+    public AudioClip switchOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,8 @@ public class DogSwitch : MonoBehaviour
         {
             isEnabled = true;
             good.SetActive(true);
+            noise.clip = switchOn;
+            noise.Play();
         }
         if (collision.gameObject.tag == "Player" && isEnabled == false)
         {
@@ -47,6 +53,8 @@ public class DogSwitch : MonoBehaviour
         {
             isEnabled = false;
             good.SetActive(false);
+            noise.clip = switchOff;
+            noise.Play();
         }
         if (collision.gameObject.tag == "Player" && isEnabled == false)
         {

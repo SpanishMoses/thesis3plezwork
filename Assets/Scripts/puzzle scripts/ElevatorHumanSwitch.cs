@@ -9,6 +9,10 @@ public class ElevatorHumanSwitch : MonoBehaviour
     public SpriteRenderer rend;
     public bool Move;
 
+    public AudioSource noise;
+    public AudioClip switchOn;
+    public AudioClip switchOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,8 @@ public class ElevatorHumanSwitch : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             Move = true;
+            noise.clip = switchOn;
+            noise.Play();
         }
     }
 
@@ -46,6 +52,8 @@ public class ElevatorHumanSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Move = false;
+            noise.clip = switchOff;
+            noise.Play();
         }
     }
 }

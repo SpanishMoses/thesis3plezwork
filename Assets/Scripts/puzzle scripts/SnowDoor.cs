@@ -6,7 +6,7 @@ public class SnowDoor : MonoBehaviour
 {
     public int switchNum;
     public GameObject[] switches;
-
+    public GameObject noise;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class SnowDoor : MonoBehaviour
             }
         }*/
         if (switchNum == switches.Length){
+            noise.SetActive(true);
             Destroy(gameObject);
         }
     }

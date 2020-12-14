@@ -22,6 +22,8 @@ public class GameCursor : MonoBehaviour
     public Sprite nothing;
     public Sprite pressed;
 
+    public AudioSource noise;
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -66,6 +68,18 @@ public class GameCursor : MonoBehaviour
         if (player.GetButtonUp("Interact"))
         {
             sprite.sprite = nothing;
+            noise.Play();
+        }
+
+        if (player.GetButtonDown("ComeBack"))
+        {
+            sprite.sprite = pressed;
+        }
+
+        if (player.GetButtonUp("ComeBack"))
+        {
+            sprite.sprite = nothing;
+            noise.Play();
         }
     }
 
