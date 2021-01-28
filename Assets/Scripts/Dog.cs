@@ -148,31 +148,49 @@ public class Dog : MonoBehaviour
             sprite.flipX = false;
         }
 
-        if (rb.velocity.y < 0 || currTarget.position.x > 0)
+        if (rb.velocity.y < 0 && isGrounded == false || currTarget.position.y > 2 && isGrounded == false)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0)
+        /*else if (rb.velocity.y > 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+        }*/
 
         if (rb.velocity.x > 0 && isGrounded == true){
             RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left, rayDist, jumpLayer);
+            Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
             if (ray3.collider != null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
+                if (rb.velocity.y < 0 || currTarget.position.x > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+                }
+                else if (rb.velocity.y > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                }
                 Debug.Log("erp");
             }
         } else if (rb.velocity.x < 0 && isGrounded == true){
             RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
+            Debug.DrawRay(transform.position, -Vector2.left, Color.red, rayDist);
             if (ray2.collider != null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
+                if (rb.velocity.y < 0 || currTarget.position.x > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+                }
+                else if (rb.velocity.y > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                }
                 Debug.Log("erp");
             }
         }
@@ -189,12 +207,21 @@ public class Dog : MonoBehaviour
         if (isGrounded == true)
         {
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
+            Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);
             if (ray.collider == null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.velocity += Vector2.up * 7f;
+                rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
                 Debug.Log("erp");
+                if (rb.velocity.y < 0 || currTarget.position.x > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+                }
+                else if (rb.velocity.y > 0)
+                {
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                }
             }
             /*RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
             if (ray2.collider != null)
@@ -211,9 +238,9 @@ public class Dog : MonoBehaviour
                 Debug.Log("erp");
             }*/
         }
-        Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);
-        Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
-        Debug.DrawRay(transform.position, -Vector2.left, Color.red, rayDist);
+        
+        
+        
 
         if (startDig == true){
             canDig = false;
