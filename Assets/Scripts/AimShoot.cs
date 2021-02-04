@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.UI;
 
 public class AimShoot : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class AimShoot : MonoBehaviour
 
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
+
+    public int numSnow;
+    public int maxSnow;
+    public GameObject snow1;
+    public GameObject snow2;
+    public GameObject snow3;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +46,38 @@ void Update()
     Direction = cursorPos - myPos;
     transform.right = Direction;
 
-    if (player.GetButtonDown("Aim&Shoot"))
+    if (numSnow >= 3){
+            snow1.SetActive(true);
+            snow2.SetActive(true);
+            snow3.SetActive(true);
+    }
+
+        if (numSnow <= 2)
+        {
+            snow1.SetActive(false);
+            snow2.SetActive(true);
+            snow3.SetActive(true);
+        }
+
+        if (numSnow <= 1)
+        {
+            snow1.SetActive(false);
+            snow2.SetActive(false);
+            snow3.SetActive(true);
+        }
+
+        if (numSnow <= 0)
+        {
+            snow1.SetActive(false);
+            snow2.SetActive(false);
+            snow3.SetActive(false);
+        }
+
+        if (numSnow > maxSnow){
+            numSnow = maxSnow;
+        }
+
+        if (player.GetButtonDown("Aim&Shoot"))
     {
 
         /*for (int i = 0; i < points.Length; i++)
@@ -55,8 +93,12 @@ void Update()
                 Destroy(points[i]);
             }*/
             //topAnim.SetFloat("Blend", 3);
-            GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);
-        snowballIns.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+            if (numSnow > 0)
+            {
+                GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);
+                snowballIns.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+                numSnow--;
+            }
     }
 }
 
@@ -66,4 +108,11 @@ void Update()
         Vector2 currentPointPos = (Vector2)throwPt.transform.position + (Direction.normalized * force * t) + 0.5f * Physics2D.gravity * (t * t);
         return currentPointPos;
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "SnowPile"){
+            numSnow = 3;
+        }
+    }*/
 }

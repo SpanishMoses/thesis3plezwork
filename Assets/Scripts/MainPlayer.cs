@@ -11,6 +11,7 @@ public class MainPlayer : MonoBehaviour
     //throwing script help from https://www.youtube.com/watch?v=3DUmpVi82q8&t=176s&ab_channel=TheGameGuy
 
     public Dog dog;
+    public AimShoot shoot;
 
     public Animator topAnim;
     public Animator lowAnim;
@@ -252,6 +253,11 @@ public class MainPlayer : MonoBehaviour
             pushing = true;
             Debug.Log("yes");
             
+        }
+
+        if (collision.gameObject.tag == "SnowPile")
+        {
+            shoot.numSnow = 3;
         }
     }
 
