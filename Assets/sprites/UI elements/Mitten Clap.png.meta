@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: f29e87191dfad314491954f99662ccee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5534417780734141445
+    second: Mitten Clap_0
+  - first:
+      213: -45833107808255785
+    second: Mitten Clap_1
+  - first:
+      213: -7864843836340702410
+    second: Mitten Clap_2
+  - first:
+      213: -8744774389666679841
+    second: Mitten Clap_3
+  - first:
+      213: -5438737167325843329
+    second: Mitten Clap_4
+  - first:
+      213: -4207704928680750716
+    second: Mitten Clap_5
+  - first:
+      213: 3877603160890094731
+    second: Mitten Clap_6
+  - first:
+      213: -3442401427642297821
+    second: Mitten Clap_7
+  - first:
+      213: 4917407653133692476
+    second: Mitten Clap_8
+  - first:
+      213: 1523542962827706186
+    second: Mitten Clap_9
+  - first:
+      213: -5724641594108653192
+    second: Mitten Clap_10
+  - first:
+      213: 6988061609479636412
+    second: Mitten Clap_11
+  - first:
+      213: 8679739551420192455
+    second: Mitten Clap_12
+  - first:
+      213: -8316836409166230040
+    second: Mitten Clap_13
+  - first:
+      213: -7135536872929287536
+    second: Mitten Clap_14
+  - first:
+      213: 4355458898494831920
+    second: Mitten Clap_15
+  - first:
+      213: 6073173978434531292
+    second: Mitten Clap_16
+  - first:
+      213: 4706776492485996420
+    second: Mitten Clap_17
+  - first:
+      213: 3355043628839081931
+    second: Mitten Clap_18
+  - first:
+      213: -4407339061561018187
+    second: Mitten Clap_19
+  - first:
+      213: -716122851273639455
+    second: Mitten Clap_20
+  - first:
+      213: -5977227923489328371
+    second: Mitten Clap_21
+  - first:
+      213: 1212793221068079532
+    second: Mitten Clap_22
+  - first:
+      213: -3956798530013301771
+    second: Mitten Clap_23
+  - first:
+      213: -3273007616604676386
+    second: Mitten Clap_24
+  - first:
+      213: -6717976097599987266
+    second: Mitten Clap_25
+  - first:
+      213: -2426268975519210597
+    second: Mitten Clap_26
+  - first:
+      213: -3753277131480042964
+    second: Mitten Clap_27
+  - first:
+      213: -1510350661754034843
+    second: Mitten Clap_28
+  - first:
+      213: -1131930896104723252
+    second: Mitten Clap_29
+  - first:
+      213: 1339514335524708626
+    second: Mitten Clap_30
+  - first:
+      213: -2629263385350595649
+    second: Mitten Clap_31
+  - first:
+      213: -1984970005954357031
+    second: Mitten Clap_32
+  - first:
+      213: 646756573970680660
+    second: Mitten Clap_33
+  - first:
+      213: 8549538902988939302
+    second: Mitten Clap_34
+  - first:
+      213: -4521498299618303835
+    second: Mitten Clap_35
+  - first:
+      213: -8770416624411999266
+    second: Mitten Clap_0
+  - first:
+      213: 7566286238978215592
+    second: Mitten Clap_1
+  - first:
+      213: -3415279938049480784
+    second: Mitten Clap_36
+  - first:
+      213: 2249413960355272442
+    second: Mitten Clap_37
+  - first:
+      213: -4124368637462451710
+    second: Mitten Clap_38
+  - first:
+      213: 5297893536978301424
+    second: Mitten Clap_39
+  - first:
+      213: -5634654681115198315
+    second: Mitten Clap_40
+  - first:
+      213: -454570361498875076
+    second: Mitten Clap_41
+  - first:
+      213: -1283191675727065106
+    second: Mitten Clap_42
+  - first:
+      213: -2876717341297965211
+    second: Mitten Clap_43
+  - first:
+      213: 1520157939223796808
+    second: Mitten Clap_44
+  - first:
+      213: 4335249570524533383
+    second: Mitten Clap_45
+  - first:
+      213: 3216348179042808173
+    second: Mitten Clap_46
+  - first:
+      213: -6168723862919492004
+    second: Mitten Clap_47
+  - first:
+      213: -8025515301904607292
+    second: Mitten Clap_48
+  - first:
+      213: -3309663851814535336
+    second: Mitten Clap_49
+  - first:
+      213: 4505194337420122689
+    second: Mitten Clap_50
+  - first:
+      213: -7319304082568265519
+    second: Mitten Clap_51
+  - first:
+      213: -1458953978493121247
+    second: Mitten Clap_52
+  - first:
+      213: 9134097086178062431
+    second: Mitten Clap_53
+  - first:
+      213: -5960125169801320717
+    second: Mitten Clap_54
+  - first:
+      213: 6174049450557824731
+    second: Mitten Clap_55
+  - first:
+      213: 3755152410304337510
+    second: Mitten Clap_56
+  - first:
+      213: 3241029741187577206
+    second: Mitten Clap_57
+  - first:
+      213: -3429416761149429733
+    second: Mitten Clap_58
+  - first:
+      213: -3738578933120482404
+    second: Mitten Clap_59
+  - first:
+      213: 7297152425188916764
+    second: Mitten Clap_60
+  - first:
+      213: -1249384265810505417
+    second: Mitten Clap_61
+  - first:
+      213: 1744295465647280638
+    second: Mitten Clap_62
+  - first:
+      213: 7082542860771699914
+    second: Mitten Clap_63
+  - first:
+      213: 1456944359420893483
+    second: Mitten Clap_64
+  - first:
+      213: -8241510768290303535
+    second: Mitten Clap_65
+  - first:
+      213: 4394541006149890220
+    second: Mitten Clap_66
+  - first:
+      213: 8401338942831708202
+    second: Mitten Clap_67
+  - first:
+      213: -1896739551399088108
+    second: Mitten Clap_68
+  - first:
+      213: -7639973926001562140
+    second: Mitten Clap_69
+  - first:
+      213: 5148713033876193333
+    second: Mitten Clap_70
+  - first:
+      213: 450317038931948134
+    second: Mitten Clap_71
+  - first:
+      213: -2647288541758093821
+    second: Mitten Clap_72
+  - first:
+      213: -1189780769767780776
+    second: Mitten Clap_73
+  - first:
+      213: 7376726145998392695
+    second: Mitten Clap_74
+  - first:
+      213: -7655609432331922242
+    second: Mitten Clap_75
+  - first:
+      213: -4481116224655113013
+    second: Mitten Clap_76
+  - first:
+      213: -7772635146822081224
+    second: Mitten Clap_77
+  - first:
+      213: 6748525638263325213
+    second: Mitten Clap_78
+  - first:
+      213: -3139651319860821761
+    second: Mitten Clap_79
+  - first:
+      213: 4627602277448198538
+    second: Mitten Clap_80
+  - first:
+      213: 5637030751236818669
+    second: Mitten Clap_81
+  - first:
+      213: -1164463243929725379
+    second: Mitten Clap_82
+  - first:
+      213: 341587712390714767
+    second: Mitten Clap_83
+  - first:
+      213: -4218685296983866572
+    second: Mitten Clap_84
+  - first:
+      213: -8359031138961213847
+    second: Mitten Clap_85
+  - first:
+      213: 3479515298290451414
+    second: Mitten Clap_86
+  - first:
+      213: 6598220978656531490
+    second: Mitten Clap_87
+  - first:
+      213: 665392881579985254
+    second: Mitten Clap_88
+  - first:
+      213: 5950993319429609512
+    second: Mitten Clap_89
+  - first:
+      213: 1679702527693506210
+    second: Mitten Clap_90
+  - first:
+      213: 629900895552577583
+    second: Mitten Clap_91
+  - first:
+      213: -2417893187996350170
+    second: Mitten Clap_92
+  - first:
+      213: -6007580832634050453
+    second: Mitten Clap_93
+  - first:
+      213: 6175276907583242835
+    second: Mitten Clap_94
+  - first:
+      213: 6465704288398798622
+    second: Mitten Clap_95
+  - first:
+      213: 8546387934943300322
+    second: Mitten Clap_96
+  - first:
+      213: 8650300999673626515
+    second: Mitten Clap_97
+  - first:
+      213: -7944411667247997184
+    second: Mitten Clap_98
+  - first:
+      213: -3254288574280595270
+    second: Mitten Clap_99
+  - first:
+      213: 7539919770822458825
+    second: Mitten Clap_100
+  - first:
+      213: 6015712015833673108
+    second: Mitten Clap_101
+  - first:
+      213: 2187075277066975606
+    second: Mitten Clap_102
+  - first:
+      213: -860498852354497691
+    second: Mitten Clap_103
+  - first:
+      213: -8084795744345433458
+    second: Mitten Clap_104
+  - first:
+      213: -8675102849340928434
+    second: Mitten Clap_105
+  - first:
+      213: -5198648292784935548
+    second: Mitten Clap_106
+  - first:
+      213: -759527962158628564
+    second: Mitten Clap_107
+  - first:
+      213: -2931547254328107320
+    second: Mitten Clap_108
+  - first:
+      213: -2212213836746015809
+    second: Mitten Clap_109
+  - first:
+      213: -282764545006467094
+    second: Mitten Clap_110
+  - first:
+      213: 1625161628985070909
+    second: Mitten Clap_111
+  - first:
+      213: -1348773411566043551
+    second: Mitten Clap_112
+  - first:
+      213: -3440606996001752371
+    second: Mitten Clap_113
+  - first:
+      213: -3638787328745916508
+    second: Mitten Clap_114
+  - first:
+      213: 3800517110508898144
+    second: Mitten Clap_115
+  - first:
+      213: -2902047411092449112
+    second: Mitten Clap_116
+  - first:
+      213: -6266172665228400623
+    second: Mitten Clap_117
+  - first:
+      213: 9038627802036395813
+    second: Mitten Clap_118
+  - first:
+      213: -7748427129735312730
+    second: Mitten Clap_119
+  - first:
+      213: 3340902207667160738
+    second: Mitten Clap_120
+  - first:
+      213: -714447237810389718
+    second: Mitten Clap_121
+  - first:
+      213: -2900054464464154403
+    second: Mitten Clap_122
+  - first:
+      213: -6642504599800132511
+    second: Mitten Clap_2
+  - first:
+      213: 7257531590280035799
+    second: Mitten Clap_3
+  - first:
+      213: -4972709653389983624
+    second: Mitten Clap_4
+  - first:
+      213: -256425989157899322
+    second: Mitten Clap_5
+  - first:
+      213: -1314746728463997108
+    second: Mitten Clap_6
+  - first:
+      213: 1035788668320250036
+    second: Mitten Clap_7
+  - first:
+      213: -9128785855894506337
+    second: Mitten Clap_8
+  - first:
+      213: 5594364408610347929
+    second: Mitten Clap_9
+  - first:
+      213: 100453360993855232
+    second: Mitten Clap_10
+  - first:
+      213: -6085952255626049323
+    second: Mitten Clap_11
+  - first:
+      213: -4545545618461122461
+    second: Mitten Clap_12
+  - first:
+      213: -6583875339884171107
+    second: Mitten Clap_13
+  - first:
+      213: 4781166641996463284
+    second: Mitten Clap_14
+  - first:
+      213: -7111363595631215663
+    second: Mitten Clap_15
+  - first:
+      213: 7712230763436138784
+    second: Mitten Clap_16
+  - first:
+      213: -2819329734834097081
+    second: Mitten Clap_17
+  - first:
+      213: 4330197116621927967
+    second: Mitten Clap_18
+  - first:
+      213: -5834497477258857185
+    second: Mitten Clap_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mitten Clap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed30eb93c88394680800000000000000
+      internalID: -8770416624411999266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae09371f39d00960800000000000000
+      internalID: 7566286238978215592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cc30e824511d3a0800000000000000
+      internalID: -6642504599800132511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd31d0878ee7b460800000000000000
+      internalID: 7257531590280035799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870c882bae26dfab0800000000000000
+      internalID: -4972709653389983624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3b015ebedf07cf0800000000000000
+      internalID: -256425989157899322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mitten Clap_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47eb48f0d411cde0800000000000000
+      internalID: -1314746728463997108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
