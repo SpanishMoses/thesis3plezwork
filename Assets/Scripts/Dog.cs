@@ -63,6 +63,8 @@ public class Dog : MonoBehaviour
     public bool gotKey;
     public GameObject keyText;
 
+    public bool beingPet;
+
     public AudioSource noise;
     public AudioClip keyNoise;
 
@@ -111,16 +113,24 @@ public class Dog : MonoBehaviour
             reachedEndOfPath = false;
         }
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-        if (distance < nextWaypointDistance)
+        if (beingPet == false)
         {
-            currentWaypoint++;
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
+
+            rb.AddForce(force);
+
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
+        }
+
+        if (beingPet == true){
+            //anim.SetFloat("Blend", 4);
+            transform.position = transform.position;
         }
 
         if (rb.velocity.x < 0.1f)

@@ -26,6 +26,8 @@ public class MainPlayer : MonoBehaviour
 
     public bool pushing;
 
+    public bool isPetting;
+
     public bool follow;
 
     //things for jump
@@ -43,6 +45,8 @@ public class MainPlayer : MonoBehaviour
 
     public bool gotKey;
     public GameObject keyText;
+
+    public float petDistance;
 
     public AudioSource noise;
     public AudioClip commandSound;
@@ -62,7 +66,7 @@ public class MainPlayer : MonoBehaviour
         translationHorz *= Time.deltaTime;
         transform.Translate(translationHorz, 0, 0);*/
 
-        if (player.GetButton("Jump") && canJump == true){
+        if (player.GetButton("Jump") && canJump == true && isPetting == false){
             noise.clip = jumpSound;
             noise.Play();
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -99,6 +103,86 @@ public class MainPlayer : MonoBehaviour
             lowAnim.SetFloat("Blend", 5);
         }
 
+        //All the petting script...AHHHHHH
+        //petting looking right idle
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false){
+            isPetting = true;
+            topAnim.SetFloat("Blend", 9);
+            lowAnim.SetFloat("Blend", 9);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
+        } else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false)
+        {
+            isPetting = false;
+            topAnim.SetFloat("Blend", 0);
+            lowAnim.SetFloat("Blend", 0);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
+        }
+
+        //petting looking left idle
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
+        {
+            isPetting = true;
+            topAnim.SetFloat("Blend", 9);
+            lowAnim.SetFloat("Blend", 9);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
+        }
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
+        {
+            isPetting = false;
+            topAnim.SetFloat("Blend", 0);
+            lowAnim.SetFloat("Blend", 0);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
+        }
+
+        //petting while running right
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false)
+        {
+            isPetting = true;
+            topAnim.SetFloat("Blend", 8);
+            lowAnim.SetFloat("Blend", 8);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
+        }
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false)
+        {
+            isPetting = false;
+            topAnim.SetFloat("Blend", 1);
+            lowAnim.SetFloat("Blend", 1);
+            topSprite.flipX = false;
+            lowSprite.flipX = false;
+        }
+
+        //petting while running left
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false)
+        {
+            isPetting = true;
+            topAnim.SetFloat("Blend", 8);
+            lowAnim.SetFloat("Blend", 8);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
+        }
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false)
+        {
+            isPetting = false;
+            topAnim.SetFloat("Blend", 1);
+            lowAnim.SetFloat("Blend", 1);
+            topSprite.flipX = true;
+            lowSprite.flipX = true;
+        }
+
+        /*if (Vector2.Distance(transform.position, dog.transform.position) < petDistance){
+            dog.beingPet = true;
+            dog.anim.SetFloat("Blend", 4);
+        } else /*if (isPetting == false){
+            dog.beingPet = false;
+        }*/
+
+        //PETTING SCRIPT ENDS WHY THIS SO LONG!?!?
+
         if (player.GetButton("DogAction") && dog.canDig == true && dog.startDig == false){
             dog.startDig = true;
         }
@@ -107,7 +191,7 @@ public class MainPlayer : MonoBehaviour
             dog.startBite = true;
         }
 
-        if (player.GetAxis("MoveHorz") > 0 && canJump == true && pushing == false)
+        if (player.GetAxis("MoveHorz") > 0 && canJump == true && pushing == false && isPetting == false)
         {
             moveRight = true;
             topAnim.SetFloat("Blend", 1);
@@ -115,7 +199,7 @@ public class MainPlayer : MonoBehaviour
             topSprite.flipX = false;
             lowSprite.flipX = false;
         }
-        else if (player.GetAxis("MoveHorz") < 0 && canJump == true && pushing == false)
+        else if (player.GetAxis("MoveHorz") < 0 && canJump == true && pushing == false && isPetting == false)
         {
             moveRight = false;
             topAnim.SetFloat("Blend", 1);
@@ -124,7 +208,7 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false)
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 0);
             lowAnim.SetFloat("Blend", 0);
@@ -132,7 +216,7 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = false;
         }
 
-        if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
+        if (player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 0);
             lowAnim.SetFloat("Blend", 0);
@@ -140,13 +224,13 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0 && pushing == false)
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0 && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 2);
             lowAnim.SetFloat("Blend", 2);
         }
 
-        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0 && pushing == false)
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0 && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 3);
             lowAnim.SetFloat("Blend", 3);
@@ -161,36 +245,41 @@ public class MainPlayer : MonoBehaviour
 
         canJump = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
-        if (pushing == true && canJump == true){
+        if (pushing == true && canJump == true && isPetting == false)
+        {
             topAnim.SetFloat("Blend", 4);
             lowAnim.SetFloat("Blend", 4);
         }
 
-        if (player.GetButton("Interact")){
+        if (player.GetButton("Interact") && isPetting == false)
+        {
             follow = false;
         }
 
-        if (player.GetButton("ComeBack")){
+        if (player.GetButton("ComeBack") && isPetting == false)
+        {
             follow = true;
         }
 
-        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") == 0 && pushing == false){
-            topAnim.SetFloat("Blend", 5);
-            lowAnim.SetFloat("Blend", 5);
-        }
-
-        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Interact") && player.GetAxis("MoveHorz") > 0 && pushing == false){
-            topAnim.SetFloat("Blend", 6);
-            lowAnim.SetFloat("Blend", 6);
-        }
-
-        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") == 0 && pushing == false)
+        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") == 0 && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 5);
             lowAnim.SetFloat("Blend", 5);
         }
 
-        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("ComeBack") && player.GetAxis("MoveHorz") > 0 && pushing == false)
+        if (player.GetButton("Interact") && player.GetAxis("MoveHorz") < 0 && pushing == false && isPetting == false || player.GetButton("Interact") && player.GetAxis("MoveHorz") > 0 && pushing == false && isPetting == false)
+        {
+            topAnim.SetFloat("Blend", 6);
+            lowAnim.SetFloat("Blend", 6);
+        }
+
+        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") == 0 && pushing == false && isPetting == false)
+        {
+            topAnim.SetFloat("Blend", 5);
+            lowAnim.SetFloat("Blend", 5);
+        }
+
+        if (player.GetButton("ComeBack") && player.GetAxis("MoveHorz") < 0 && pushing == false && isPetting == false || player.GetButton("ComeBack") && player.GetAxis("MoveHorz") > 0 && pushing == false && isPetting == false)
         {
             topAnim.SetFloat("Blend", 6);
             lowAnim.SetFloat("Blend", 6);
@@ -209,10 +298,12 @@ public class MainPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float translationHorz = player.GetAxis("MoveHorz") * speed;
-        translationHorz *= Time.deltaTime;
-        transform.Translate(translationHorz, 0, 0);
-
+        if (isPetting == false)
+        {
+            float translationHorz = player.GetAxis("MoveHorz") * speed;
+            translationHorz *= Time.deltaTime;
+            transform.Translate(translationHorz, 0, 0);
+        }
         /*if (player.GetAxis("MoveHorz") > 0){
             anim.SetFloat("Blend", 1);
             sprite.flipX = false;
