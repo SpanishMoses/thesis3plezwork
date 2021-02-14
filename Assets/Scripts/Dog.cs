@@ -11,6 +11,8 @@ public class Dog : MonoBehaviour
 
     //public GameObject cursorPoint;
 
+    public MainPlayer play;
+
     public Transform myLocation;
 
     public bool isFollowingPlayer;
@@ -65,6 +67,11 @@ public class Dog : MonoBehaviour
 
     public bool beingPet;
 
+    //code for respawning
+    public float pointX;
+    public float pointY;
+    public float pointZ;
+
     public AudioSource noise;
     public AudioClip keyNoise;
 
@@ -79,6 +86,10 @@ public class Dog : MonoBehaviour
         //SearchTargets();
         InvokeRepeating("UpdatePath", 0f, .5f);
         gotKey = false;
+        pointX = PlayerPrefs.GetFloat("CheckPointX", 197.53f);
+        pointY = PlayerPrefs.GetFloat("CheckPointY", 8.63f);
+        pointZ = PlayerPrefs.GetFloat("CheckPointZ");
+        transform.position = new Vector3(pointX, pointY, pointZ);
     }
 
     void UpdatePath()
@@ -99,6 +110,11 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //checkpoint check
+        pointX = play.pointX;
+        pointY = play.pointY;
+        pointZ = play.pointZ;
 
         if (path == null)
             return;
@@ -133,32 +149,32 @@ public class Dog : MonoBehaviour
             transform.position = transform.position;
         }
 
-        if (rb.velocity.x < 0.1f)
+        if (rb.velocity.x < 0.1f && beingPet == false)
         {
             moveRight = true;
             anim.SetFloat("Blend", 1);
             sprite.flipX = false;
         }
-        else if (rb.velocity.x > 0.1f)
+        else if (rb.velocity.x > 0.1f && beingPet == false)
         {
             moveRight = false;
             anim.SetFloat("Blend", 1);
             sprite.flipX = true;
         }
 
-        if (rb.velocity.x >= 0 && moveRight == true)
+        if (rb.velocity.x >= 0 && moveRight == true && beingPet == false)
         {
             anim.SetFloat("Blend", 0);
             sprite.flipX = true;
         }
 
-        if (rb.velocity.x <= 0 && moveRight == false)
+        if (rb.velocity.x <= 0 && moveRight == false && beingPet == false)
         {
             anim.SetFloat("Blend", 0);
             sprite.flipX = false;
         }
 
-        if (rb.velocity.y < 0 && isGrounded == false || currTarget.position.y > 2 && isGrounded == false)
+        if (rb.velocity.y < 0 && isGrounded == false && beingPet == false || currTarget.position.y > 2 && isGrounded == false && beingPet == false)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
@@ -167,7 +183,8 @@ public class Dog : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }*/
 
-        if (rb.velocity.x > 0 && isGrounded == true){
+        if (rb.velocity.x > 0 && isGrounded == true && beingPet == false)
+        {
             RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left, rayDist, jumpLayer);
             Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
             if (ray3.collider != null)
@@ -185,7 +202,8 @@ public class Dog : MonoBehaviour
                 }
                 Debug.Log("erp");
             }
-        } else if (rb.velocity.x < 0 && isGrounded == true){
+        } else if (rb.velocity.x < 0 && isGrounded == true && beingPet == false)
+        {
             RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
             Debug.DrawRay(transform.position, -Vector2.left, Color.red, rayDist);
             if (ray2.collider != null)
@@ -210,11 +228,12 @@ public class Dog : MonoBehaviour
             rb.AddForce(Vector2.up * 400f);
         }*/
 
-        if (isGrounded == false){
+        if (isGrounded == false && beingPet == false)
+        {
             anim.SetFloat("Blend", 3);
         }
 
-        if (isGrounded == true)
+        if (isGrounded == true && beingPet == false)
         {
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -Vector2.up, rayDist, layer);
             Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);

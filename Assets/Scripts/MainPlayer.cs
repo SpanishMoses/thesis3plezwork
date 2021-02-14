@@ -48,6 +48,11 @@ public class MainPlayer : MonoBehaviour
 
     public float petDistance;
 
+    //code for respawning
+    public float pointX;
+    public float pointY;
+    public float pointZ;
+
     public AudioSource noise;
     public AudioClip commandSound;
     public AudioClip jumpSound;
@@ -57,6 +62,11 @@ public class MainPlayer : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(playerID);
         gotKey = false;
+        pointX = PlayerPrefs.GetFloat("CheckPointX", 197.53f);
+        pointY = PlayerPrefs.GetFloat("CheckPointY", 8.63f);
+        pointZ = PlayerPrefs.GetFloat("CheckPointZ");
+        transform.position = new Vector3(pointX, pointY, pointZ);
+        dog.transform.position = new Vector3(dog.pointX, dog.pointY, dog.pointZ);
     }
 
     // Update is called once per frame
@@ -174,12 +184,12 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        /*if (Vector2.Distance(transform.position, dog.transform.position) < petDistance){
+        if (Vector2.Distance(transform.position, dog.transform.position) < petDistance && isPetting == true){
             dog.beingPet = true;
             dog.anim.SetFloat("Blend", 4);
-        } else /*if (isPetting == false){
+        } else if (isPetting == false){
             dog.beingPet = false;
-        }*/
+        }
 
         //PETTING SCRIPT ENDS WHY THIS SO LONG!?!?
 
@@ -291,7 +301,7 @@ public class MainPlayer : MonoBehaviour
         }
 
         if (player.GetButton("Restart")){
-            SceneManager.LoadScene("vertical slice");
+            ResetPos();
         }
     }
 
@@ -350,6 +360,23 @@ public class MainPlayer : MonoBehaviour
         {
             shoot.numSnow = 3;
         }
+
+        if (collision.gameObject.tag == "Checkpoint")
+        {
+            //checkpoint = other.gameObject;
+            Physics.SyncTransforms();
+            pointX = gameObject.transform.position.x;
+            pointY = gameObject.transform.position.y;
+            pointZ = gameObject.transform.position.z;
+            float positionX = pointX;
+            float positionY = pointY;
+            float positionZ = pointZ;
+            PlayerPrefs.SetFloat("CheckPointX", positionX);
+            PlayerPrefs.SetFloat("CheckPointY", positionY);
+            PlayerPrefs.SetFloat("CheckPointZ", positionZ);
+            /*CheckPoints check = other.transform.GetComponent<CheckPoints>();
+            check.Save();*/
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -360,5 +387,19 @@ public class MainPlayer : MonoBehaviour
             Debug.Log("yes");
 
         }
+    }
+
+    void ResetPos()
+    {
+
+        /*pointX = PlayerPrefs.GetFloat("CheckPointX");
+        pointY = PlayerPrefs.GetFloat("CheckPointY");
+        pointZ = PlayerPrefs.GetFloat("CheckPointZ");*/
+        /*pointX = PlayerPrefs.GetFloat("CheckPointX");
+        pointY = PlayerPrefs.GetFloat("CheckPointY");
+        pointZ = PlayerPrefs.GetFloat("CheckPointZ");*/
+        transform.position = new Vector3(pointX, pointY, pointZ);
+        dog.transform.position = new Vector3(dog.pointX, dog.pointY, dog.pointZ);
+
     }
 }
