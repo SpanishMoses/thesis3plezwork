@@ -106,7 +106,7 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetButton("ComeBack")){
+        if (player.GetButton("ComeBack") && dog.isDistracted == false){
             dog.currTarget = dog.playerTarget.transform;
             dog.isFollowingPlayer = true;
             topAnim.SetFloat("Blend", 5);

@@ -47,7 +47,7 @@ public class GameCursor : MonoBehaviour
         translationVert *= Time.deltaTime;
         transform.Translate(0, translationVert, 0);
 
-        if (player.GetButton("Interact"))
+        if (player.GetButton("Interact") && dog.isDistracted == false)
         {
             //dog.currTarget = dog.cursorTarget.transform;
             dog.isFollowingPlayer = false;

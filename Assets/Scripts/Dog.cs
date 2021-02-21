@@ -66,6 +66,7 @@ public class Dog : MonoBehaviour
     public GameObject keyText;
 
     public bool beingPet;
+    public bool isDistracted;
 
     //code for respawning
     public float pointX;
@@ -380,6 +381,11 @@ public class Dog : MonoBehaviour
         /*if (collision.gameObject.tag == "Point"){
             currTarget = transform;
         }*/
+
+        if (collision.gameObject.tag == "Distract"){
+            isDistracted = true;
+            currTarget = collision.gameObject.transform;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -394,6 +400,10 @@ public class Dog : MonoBehaviour
             exclamation.SetActive(false);
             canBite = false;
         }
-
+        if (collision.gameObject.tag == "Distract")
+        {
+            isDistracted = false;
+            currTarget = playerTarget.transform;
+        }
     }
 }
