@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: 53bd1cff0c2a533448c4f679deb7d061
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3982490275988933429
+    second: Thought Bubble_0
+  - first:
+      213: -3589539901292348952
+    second: Thought Bubble_1
+  - first:
+      213: 8273078418077675814
+    second: Thought Bubble_2
+  - first:
+      213: 8999532127798200677
+    second: Thought Bubble_3
+  - first:
+      213: -7178477326727084486
+    second: Thought Bubble_4
+  - first:
+      213: -9146377562992169793
+    second: Thought Bubble_5
+  - first:
+      213: -6059184628664036411
+    second: Thought Bubble_6
+  - first:
+      213: -3832105645624882731
+    second: Thought Bubble_7
+  - first:
+      213: -2088066421233644567
+    second: Thought Bubble_8
+  - first:
+      213: -2566083628011415683
+    second: Thought Bubble_9
+  - first:
+      213: -7158022780065467132
+    second: Thought Bubble_10
+  - first:
+      213: 8666239463998417149
+    second: Thought Bubble_11
+  - first:
+      213: -8018461104117199630
+    second: Thought Bubble_12
+  - first:
+      213: -6696732901981031900
+    second: Thought Bubble_13
+  - first:
+      213: 536520755165280395
+    second: Thought Bubble_14
+  - first:
+      213: -5664303274776143169
+    second: Thought Bubble_15
+  - first:
+      213: -2842328842377424325
+    second: Thought Bubble_16
+  - first:
+      213: 2540359695700352434
+    second: Thought Bubble_0
+  - first:
+      213: 6858276994722965503
+    second: Thought Bubble_1
+  - first:
+      213: -9150188631029352596
+    second: Thought Bubble_2
+  - first:
+      213: -1676518624227438188
+    second: Thought Bubble_3
+  - first:
+      213: -3314763903354048349
+    second: Thought Bubble_4
+  - first:
+      213: 7428392158687792869
+    second: Thought Bubble_5
+  - first:
+      213: -9209478011646265054
+    second: Thought Bubble_6
+  - first:
+      213: -1685392802815121245
+    second: Thought Bubble_7
+  - first:
+      213: 8377785942882814560
+    second: Thought Bubble_8
+  - first:
+      213: -3366214913109881404
+    second: Thought Bubble_9
+  - first:
+      213: 7474947628687650485
+    second: Thought Bubble_10
+  - first:
+      213: 7975908391424025687
+    second: Thought Bubble_11
+  - first:
+      213: -8102101869570834171
+    second: Thought Bubble_12
+  - first:
+      213: 3162493402149583280
+    second: Thought Bubble_13
+  - first:
+      213: -6768969629508123306
+    second: Thought Bubble_14
+  - first:
+      213: 2984904007623177526
+    second: Thought Bubble_15
+  - first:
+      213: -4309848094197866638
+    second: Thought Bubble_16
+  - first:
+      213: 1939027642329837321
+    second: Thought Bubble_17
+  - first:
+      213: 6731643893844446953
+    second: Thought Bubble_18
+  - first:
+      213: 4257331213307335833
+    second: Thought Bubble_19
+  - first:
+      213: -2791993149452850705
+    second: Thought Bubble_20
+  - first:
+      213: -6487316059549245631
+    second: Thought Bubble_21
+  - first:
+      213: 2257320130128443117
+    second: Thought Bubble_22
+  - first:
+      213: -5565869011580568739
+    second: Thought Bubble_23
+  - first:
+      213: -2030294372707217026
+    second: Thought Bubble_24
+  - first:
+      213: 2110134834675486271
+    second: Thought Bubble_25
+  - first:
+      213: -2868307662843863609
+    second: Thought Bubble_26
+  - first:
+      213: 943447374556721643
+    second: Thought Bubble_27
+  - first:
+      213: 1003085197955869865
+    second: Thought Bubble_28
+  - first:
+      213: 1230018295632191937
+    second: Thought Bubble_29
+  - first:
+      213: 3408754063071544668
+    second: Thought Bubble_30
+  - first:
+      213: -4407036980866874055
+    second: Thought Bubble_31
+  - first:
+      213: 6766266769157546264
+    second: Thought Bubble_32
+  - first:
+      213: -1297017185422495937
+    second: Thought Bubble_33
+  - first:
+      213: -9133745458728693345
+    second: Thought Bubble_34
+  - first:
+      213: -1145534143082097733
+    second: Thought Bubble_35
+  - first:
+      213: -4367207135141065462
+    second: Thought Bubble_36
+  - first:
+      213: 4398616306476946370
+    second: Thought Bubble_37
+  - first:
+      213: 7928849417560049407
+    second: Thought Bubble_38
+  - first:
+      213: -1073500408535416968
+    second: Thought Bubble_39
+  - first:
+      213: -554561993517497212
+    second: Thought Bubble_40
+  - first:
+      213: -9152242410912099404
+    second: Thought Bubble_41
+  - first:
+      213: 6132238822958690658
+    second: Thought Bubble_42
+  - first:
+      213: -9071390223139245999
+    second: Thought Bubble_43
+  - first:
+      213: -4915036124089194718
+    second: Thought Bubble_44
+  - first:
+      213: 5630973723656371604
+    second: Thought Bubble_45
+  - first:
+      213: -160854927751852888
+    second: Thought Bubble_46
+  - first:
+      213: 8373174337399235983
+    second: Thought Bubble_47
+  - first:
+      213: -5798653872803056270
+    second: Thought Bubble_48
+  - first:
+      213: -1591205500934772428
+    second: Thought Bubble_49
+  - first:
+      213: 2837181273759272352
+    second: Thought Bubble_50
+  - first:
+      213: 173996835607082198
+    second: Thought Bubble_51
+  - first:
+      213: 1758583007408918016
+    second: Thought Bubble_52
+  - first:
+      213: 4098686495016044768
+    second: Thought Bubble_53
+  - first:
+      213: 9150423953082203668
+    second: Thought Bubble_54
+  - first:
+      213: -200278392611526941
+    second: Thought Bubble_55
+  - first:
+      213: -3759821588482435836
+    second: Thought Bubble_56
+  - first:
+      213: -1624914231711571771
+    second: Thought Bubble_57
+  - first:
+      213: -6013019141741505147
+    second: Thought Bubble_58
+  - first:
+      213: 5499035647778592936
+    second: Thought Bubble_59
+  - first:
+      213: 2286563352084146027
+    second: Thought Bubble_60
+  - first:
+      213: -8839000658690216327
+    second: Thought Bubble_61
+  - first:
+      213: -4916090159037611281
+    second: Thought Bubble_62
+  - first:
+      213: -1930186903763678170
+    second: Thought Bubble_63
+  - first:
+      213: 5721953794828671844
+    second: Thought Bubble_64
+  - first:
+      213: -5908104978309308588
+    second: Thought Bubble_65
+  - first:
+      213: -2209512617959233652
+    second: Thought Bubble_66
+  - first:
+      213: -9122428422845855034
+    second: Thought Bubble_67
+  - first:
+      213: 8575715812301160018
+    second: Thought Bubble_68
+  - first:
+      213: -3675836078421578747
+    second: Thought Bubble_69
+  - first:
+      213: 3851464218698201113
+    second: Thought Bubble_70
+  - first:
+      213: -5710556795304790689
+    second: Thought Bubble_17
+  - first:
+      213: -3067242335956710443
+    second: Thought Bubble_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Thought Bubble_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 289
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd50ff0fab214320800000000000000
+      internalID: 2540359695700352434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 289
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff722b9079e7d2f50800000000000000
+      internalID: 6858276994722965503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c677dab7beff30180800000000000000
+      internalID: -9150188631029352596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 194
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491d89f913fcbb8e0800000000000000
+      internalID: -1676518624227438188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a07b42dac79ff1d0800000000000000
+      internalID: -3314763903354048349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 99
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee02ee9f43f61760800000000000000
+      internalID: 7428392158687792869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229bd05da8c513080800000000000000
+      internalID: -9209478011646265054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thought Bubble_7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 4
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a86439ec284c98e0800000000000000
+      internalID: -1685392802815121245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
