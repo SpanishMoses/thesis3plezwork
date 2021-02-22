@@ -18,7 +18,7 @@ public class Rope : MonoBehaviour
     {
         if (disable == true){
             box.GetComponent<Box>().hinge.enabled = false;
-
+            
         }
     }
 }
