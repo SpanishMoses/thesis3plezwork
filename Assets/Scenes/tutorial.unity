@@ -1214,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pushable block
       objectReference: {fileID: 0}
+    - target: {fileID: 6275115139898202312, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6275115139898202317, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.01
@@ -3125,7 +3129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356877240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3788147, y: -1.4, z: -36.470737}
+  m_LocalPosition: {x: 3.3788147, y: 0.97, z: -36.470737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1776415120}
@@ -18310,7 +18314,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.9230804, y: 1.5150261}
+  m_Offset: {x: -3.935913, y: 1.5150261}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18321,7 +18325,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 38.32956, y: 19.237999}
+  m_Size: {x: 29.378418, y: 19.237999}
   m_EdgeRadius: 0
 --- !u!4 &493934245
 Transform:
@@ -18880,7 +18884,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7104416, y: -3.8019867}
+  m_Offset: {x: 1.1624069, y: -3.8019867}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18891,7 +18895,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.248123, y: 8.603973}
+  m_Size: {x: 27.397049, y: 8.603973}
   m_EdgeRadius: 0
 --- !u!4 &645279114
 Transform:
@@ -25835,7 +25839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181147941042037079, guid: aa59321da2ff2264cba6805460752b39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.191193
+      value: -23.1
       objectReference: {fileID: 0}
     - target: {fileID: 1181147941042037079, guid: aa59321da2ff2264cba6805460752b39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26221,7 +26225,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.9938507, y: 1.3178635}
+  m_Offset: {x: -7.9441376, y: 1.3178635}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26232,7 +26236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 53.97586, y: 26.789818}
+  m_Size: {x: 44.075287, y: 26.789818}
   m_EdgeRadius: 0
 --- !u!4 &1124211424
 Transform:
@@ -27206,7 +27210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181147941042037079, guid: aa59321da2ff2264cba6805460752b39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.333313
+      value: -11.09
       objectReference: {fileID: 0}
     - target: {fileID: 1181147941042037079, guid: aa59321da2ff2264cba6805460752b39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27765,7 +27769,7 @@ MonoBehaviour:
   sprite: {fileID: 1325701865}
   moveRight: 0
   speed: 1200
-  nextWaypointDistance: 1
+  nextWaypointDistance: 0.5
   spawnPoopTime: 0
   reachedEndOfPath: 0
   seeker: {fileID: 1325701863}
@@ -28143,7 +28147,7 @@ PrefabInstance:
       objectReference: {fileID: 1371098572}
     - target: {fileID: 551860330847562349, guid: 3ae1dcd4108158d40b3984c7d274445a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.576691
+      value: 15.85
       objectReference: {fileID: 0}
     - target: {fileID: 551860330847562349, guid: 3ae1dcd4108158d40b3984c7d274445a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35202,7 +35206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2599486452630802256, guid: e91cc7c0ff7867948b4848e37c943ad7, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e91cc7c0ff7867948b4848e37c943ad7, type: 3}

@@ -16,7 +16,7 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * 5f;
+        rb.velocity = transform.up * 2f;
         StartCoroutine(enable());
     }
 
@@ -32,7 +32,7 @@ public class Key : MonoBehaviour
     }
 
     IEnumerator enable(){
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.35f);
         circle.enabled = true;
     }
 }
