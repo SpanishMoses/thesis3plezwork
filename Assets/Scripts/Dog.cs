@@ -154,25 +154,33 @@ public class Dog : MonoBehaviour
         {
             moveRight = true;
             anim.SetFloat("Blend", 1);
-            sprite.flipX = false;
+            //sprite.flipX = false;
         }
         else if (rb.velocity.x > 0.1f && beingPet == false)
         {
             moveRight = false;
             anim.SetFloat("Blend", 1);
+            //sprite.flipX = true;
+        }
+
+        if (moveRight == true){
+            sprite.flipX = false;
+        }
+
+        if (moveRight == false){
             sprite.flipX = true;
         }
 
         if (rb.velocity.x >= 0 && moveRight == true && beingPet == false)
         {
             anim.SetFloat("Blend", 0);
-            sprite.flipX = true;
+            //sprite.flipX = true;
         }
 
         if (rb.velocity.x <= 0 && moveRight == false && beingPet == false)
         {
             anim.SetFloat("Blend", 0);
-            sprite.flipX = false;
+            //sprite.flipX = false;
         }
 
         if (rb.velocity.y < 0 && isGrounded == false && beingPet == false || currTarget.position.y > 2 && isGrounded == false && beingPet == false)
