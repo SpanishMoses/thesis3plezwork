@@ -322,6 +322,7 @@ public class Dog : MonoBehaviour
             if (rope != null)
             {
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
+                anim.SetFloat("Blend", 5);
                 rope.disable = true;
                 currTarget = transform;
                 Destroy(rope.gameObject);
