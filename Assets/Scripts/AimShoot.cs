@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class AimShoot : MonoBehaviour
 {
+    public MainPlayer main;
     public GameObject cursor;
     public GameObject throwPt;
     public GameObject snowball;
@@ -17,6 +18,7 @@ public class AimShoot : MonoBehaviour
     Vector2 Direction;
     public Animator topAnim;
     //public Animator lowAnim;
+    public bool windUp;
 
     [SerializeField] private int playerID = 0;
     [SerializeField] private Player player;
@@ -79,7 +81,7 @@ void Update()
 
         if (player.GetButtonDown("Aim&Shoot"))
     {
-
+            main.isPetting = true;
         /*for (int i = 0; i < points.Length; i++)
         {
             points[i].transform.position = PointPosition(i * 0.1f);
@@ -93,6 +95,7 @@ void Update()
                 Destroy(points[i]);
             }*/
             //topAnim.SetFloat("Blend", 3);
+            main.isPetting = false;
             if (numSnow > 0)
             {
                 GameObject snowballIns = Instantiate(snowball, throwPt.transform.position, throwPt.transform.rotation);

@@ -48,6 +48,8 @@ public class MainPlayer : MonoBehaviour
 
     public float petDistance;
 
+    public GameObject cursor;
+
     //code for respawning
     public float pointX;
     public float pointY;
@@ -76,7 +78,8 @@ public class MainPlayer : MonoBehaviour
         translationHorz *= Time.deltaTime;
         transform.Translate(translationHorz, 0, 0);*/
 
-        if (player.GetButton("Jump") && canJump == true && isPetting == false){
+        if (player.GetButton("Jump") && canJump == true && isPetting == false && shoot.windUp == false)
+        {
             noise.clip = jumpSound;
             noise.Play();
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -115,13 +118,13 @@ public class MainPlayer : MonoBehaviour
 
         //All the petting script...AHHHHHH
         //petting looking right idle
-        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false){
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false && shoot.windUp == false){
             isPetting = true;
             topAnim.SetFloat("Blend", 9);
             lowAnim.SetFloat("Blend", 9);
             topSprite.flipX = false;
             lowSprite.flipX = false;
-        } else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false)
+        } else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == true && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = false;
             topAnim.SetFloat("Blend", 0);
@@ -131,7 +134,7 @@ public class MainPlayer : MonoBehaviour
         }
 
         //petting looking left idle
-        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = true;
             topAnim.SetFloat("Blend", 9);
@@ -139,7 +142,7 @@ public class MainPlayer : MonoBehaviour
             topSprite.flipX = true;
             lowSprite.flipX = true;
         }
-        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false)
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") == 0 && moveRight == false && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = false;
             topAnim.SetFloat("Blend", 0);
@@ -149,7 +152,7 @@ public class MainPlayer : MonoBehaviour
         }
 
         //petting while running right
-        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false)
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = true;
             topAnim.SetFloat("Blend", 8);
@@ -157,7 +160,7 @@ public class MainPlayer : MonoBehaviour
             topSprite.flipX = false;
             lowSprite.flipX = false;
         }
-        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false)
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") > 0 && moveRight == true && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = false;
             topAnim.SetFloat("Blend", 1);
@@ -167,7 +170,7 @@ public class MainPlayer : MonoBehaviour
         }
 
         //petting while running left
-        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false)
+        if (player.GetButtonDown("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = true;
             topAnim.SetFloat("Blend", 8);
@@ -175,7 +178,7 @@ public class MainPlayer : MonoBehaviour
             topSprite.flipX = true;
             lowSprite.flipX = true;
         }
-        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false)
+        else if (player.GetButtonUp("Pet") && player.GetAxis("MoveHorz") < 0 && moveRight == false && canJump == true && pushing == false && shoot.windUp == false)
         {
             isPetting = false;
             topAnim.SetFloat("Blend", 1);
@@ -184,7 +187,8 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (Vector2.Distance(transform.position, dog.transform.position) < petDistance && isPetting == true){
+        if (Vector2.Distance(transform.position, dog.transform.position) < petDistance && isPetting == true && shoot.windUp == false)
+        {
             dog.beingPet = true;
             dog.anim.SetFloat("Blend", 4);
         } else if (isPetting == false){
@@ -293,6 +297,24 @@ public class MainPlayer : MonoBehaviour
         {
             topAnim.SetFloat("Blend", 6);
             lowAnim.SetFloat("Blend", 6);
+        }
+
+        if (player.GetButton("Aim&Shoot"))
+        {
+            if (cursor.transform.position.x > transform.position.x)
+            {
+                Debug.Log("ahead");
+                topSprite.flipX = false;
+                lowSprite.flipX = false;
+                moveRight = true;
+            }
+            if (cursor.transform.position.x < transform.position.x)
+            {
+                Debug.Log("back");
+                topSprite.flipX = true;
+                lowSprite.flipX = true;
+                moveRight = false;
+            }
         }
 
         if (gotKey == false)

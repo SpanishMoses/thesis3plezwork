@@ -287,7 +287,9 @@ public class Dog : MonoBehaviour
 
         if (startBite == true){
             canBite = false;
-            StartCoroutine(beginbite());
+            anim.SetFloat("Blend", 5);
+            currTarget = transform;
+            //StartCoroutine(beginbite());
         }
 
         if (gotKey == false){
@@ -312,9 +314,9 @@ public class Dog : MonoBehaviour
         startDig = false;
     }
 
-    IEnumerator beginbite(){
+    /*IEnumerator beginbite(){
         anim.SetFloat("Blend", 5);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
         foreach (Collider2D near in colliders)
         {
@@ -322,7 +324,25 @@ public class Dog : MonoBehaviour
             if (rope != null)
             {
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
-                anim.SetFloat("Blend", 5);
+                //anim.SetFloat("Blend", 5);
+                rope.disable = true;
+                currTarget = transform;
+                Destroy(rope.gameObject);
+                //Destroy(near.gameObject);
+            }
+        }
+        startBite = false;
+    }*/
+
+    void destroyVine(){
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
+        foreach (Collider2D near in colliders)
+        {
+            Rope rope = near.GetComponent<Rope>();
+            if (rope != null)
+            {
+                //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
+                //anim.SetFloat("Blend", 5);
                 rope.disable = true;
                 currTarget = transform;
                 Destroy(rope.gameObject);
@@ -331,7 +351,6 @@ public class Dog : MonoBehaviour
         }
         startBite = false;
     }
-
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
