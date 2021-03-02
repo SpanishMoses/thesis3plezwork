@@ -16,6 +16,7 @@ TagManager:
   - Block
   - SnowPile
   - Distract
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

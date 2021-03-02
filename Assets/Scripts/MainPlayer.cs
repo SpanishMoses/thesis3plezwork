@@ -59,6 +59,15 @@ public class MainPlayer : MonoBehaviour
     public AudioClip commandSound;
     public AudioClip jumpSound;
 
+    public Scene curScene;
+    public string sceneName;
+
+    public GameObject load;
+    public Transform loadingBar;
+
+    public float currentAmount;
+    public float loadSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +78,9 @@ public class MainPlayer : MonoBehaviour
         pointZ = PlayerPrefs.GetFloat("CheckPointZ");
         transform.position = new Vector3(pointX, pointY, pointZ);
         dog.transform.position = new Vector3(dog.pointX, dog.pointY, dog.pointZ);
+
+        curScene = SceneManager.GetActiveScene();
+        sceneName = curScene.name;
     }
 
     // Update is called once per frame
@@ -322,9 +334,22 @@ public class MainPlayer : MonoBehaviour
             keyText.SetActive(false);
         }
 
-        if (player.GetButton("Restart")){
-            ResetPos();
+        if (player.GetButton("Restart"))
+        {
+            load.SetActive(true);
+            currentAmount += loadSpeed * Time.deltaTime;
         }
+        else
+        {
+            load.SetActive(false);
+            currentAmount = 0;
+        }
+            loadingBar.GetComponent<Image>().fillAmount = currentAmount / 100;
+            if (currentAmount >= 100)
+            {
+                SceneManager.LoadScene(sceneName);
+                ResetPos();
+            }
     }
 
 
