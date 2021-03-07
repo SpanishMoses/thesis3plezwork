@@ -23,7 +23,7 @@ public class Box : MonoBehaviour
 
         if (canPush == true){
             rb.constraints = RigidbodyConstraints2D.None;
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            //rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
@@ -53,6 +53,13 @@ public class Box : MonoBehaviour
         if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog")
         {
             canPush = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Distract"){
+            Destroy(collision.gameObject);
         }
     }
 }
