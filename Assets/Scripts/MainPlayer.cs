@@ -350,6 +350,12 @@ public class MainPlayer : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
                 ResetPos();
             }
+
+            if (Input.GetKey(KeyCode.M)){
+            PlayerPrefs.SetFloat("CheckPointX", 430);
+            PlayerPrefs.SetFloat("CheckPointY", 30.61f);
+            PlayerPrefs.SetFloat("CheckPointZ", 0);
+        }
     }
 
 
@@ -412,9 +418,10 @@ public class MainPlayer : MonoBehaviour
         {
             //checkpoint = other.gameObject;
             Physics.SyncTransforms();
-            pointX = gameObject.transform.position.x;
-            pointY = gameObject.transform.position.y;
-            pointZ = gameObject.transform.position.z;
+            checkpoint check = collision.gameObject.GetComponent<checkpoint>();
+            pointX = check.x;
+            pointY = check.y;
+            pointZ = check.z;
             float positionX = pointX;
             float positionY = pointY;
             float positionZ = pointZ;
