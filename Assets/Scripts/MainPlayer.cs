@@ -71,14 +71,21 @@ public class MainPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    private void Awake()
+    {
         player = ReInput.players.GetPlayer(playerID);
         gotKey = false;
-        pointX = PlayerPrefs.GetFloat("CheckPointX", 197.53f);
-        pointY = PlayerPrefs.GetFloat("CheckPointY", 8.63f);
+        pointX = PlayerPrefs.GetFloat("CheckPointX");
+        pointY = PlayerPrefs.GetFloat("CheckPointY");
         pointZ = PlayerPrefs.GetFloat("CheckPointZ");
-        transform.position = new Vector3(pointX, pointY, pointZ);
-        dog.transform.position = new Vector3(dog.pointX, dog.pointY, dog.pointZ);
-
+        this.transform.position = new Vector2(pointX, pointY);
+        dog.transform.position = new Vector2(dog.pointX, dog.pointY);
+        ResetPos();
+        Physics.SyncTransforms();
+        //Physics.SyncTransforms();
         curScene = SceneManager.GetActiveScene();
         sceneName = curScene.name;
     }
@@ -352,8 +359,8 @@ public class MainPlayer : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.M)){
-            PlayerPrefs.SetFloat("CheckPointX", 430);
-            PlayerPrefs.SetFloat("CheckPointY", 30.61f);
+            PlayerPrefs.SetFloat("CheckPointX", 541.97f);
+            PlayerPrefs.SetFloat("CheckPointY", 13.76f);
             PlayerPrefs.SetFloat("CheckPointZ", 0);
         }
     }
@@ -416,8 +423,7 @@ public class MainPlayer : MonoBehaviour
 
         if (collision.gameObject.tag == "Checkpoint")
         {
-            //checkpoint = other.gameObject;
-            Physics.SyncTransforms();
+            //checkpoint = other.gameObject;           
             checkpoint check = collision.gameObject.GetComponent<checkpoint>();
             pointX = check.x;
             pointY = check.y;
@@ -428,6 +434,7 @@ public class MainPlayer : MonoBehaviour
             PlayerPrefs.SetFloat("CheckPointX", positionX);
             PlayerPrefs.SetFloat("CheckPointY", positionY);
             PlayerPrefs.SetFloat("CheckPointZ", positionZ);
+            //dog.transform.position = collision.transform.position;
             /*CheckPoints check = other.transform.GetComponent<CheckPoints>();
             check.Save();*/
         }
@@ -446,14 +453,14 @@ public class MainPlayer : MonoBehaviour
     void ResetPos()
     {
 
+        pointX = PlayerPrefs.GetFloat("CheckPointX");
+        pointY = PlayerPrefs.GetFloat("CheckPointY");
+        pointZ = PlayerPrefs.GetFloat("CheckPointZ");
         /*pointX = PlayerPrefs.GetFloat("CheckPointX");
         pointY = PlayerPrefs.GetFloat("CheckPointY");
         pointZ = PlayerPrefs.GetFloat("CheckPointZ");*/
-        /*pointX = PlayerPrefs.GetFloat("CheckPointX");
-        pointY = PlayerPrefs.GetFloat("CheckPointY");
-        pointZ = PlayerPrefs.GetFloat("CheckPointZ");*/
-        transform.position = new Vector3(pointX, pointY, pointZ);
-        dog.transform.position = new Vector3(dog.pointX, dog.pointY, dog.pointZ);
-
+        this.transform.position = new Vector2(pointX, pointY);
+        dog.transform.position = new Vector3(dog.pointX, dog.pointY);
+        //Physics.SyncTransforms();
     }
 }

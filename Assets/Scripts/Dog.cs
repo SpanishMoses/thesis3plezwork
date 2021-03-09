@@ -194,8 +194,8 @@ public class Dog : MonoBehaviour
 
         if (rb.velocity.x > 0 && isGrounded == true && beingPet == false)
         {
-            RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left, rayDist, jumpLayer);
-            Debug.DrawRay(transform.position, Vector2.left, Color.red, rayDist);
+            RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left + new Vector2(0, -.3f), rayDist, jumpLayer);
+            Debug.DrawRay(transform.position, Vector2.left  + new Vector2(0, -.3f), Color.red, rayDist);
             if (ray3.collider != null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -213,8 +213,8 @@ public class Dog : MonoBehaviour
             }
         } else if (rb.velocity.x < 0 && isGrounded == true && beingPet == false)
         {
-            RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left, rayDist, jumpLayer);
-            Debug.DrawRay(transform.position, -Vector2.left, Color.red, rayDist);
+            RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left + new Vector2(0, -.3f), rayDist, jumpLayer);
+            Debug.DrawRay(transform.position, -Vector2.left + new Vector2(0, -.3f), Color.red, rayDist);
             if (ray2.collider != null)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);

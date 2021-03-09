@@ -23,7 +23,6 @@ public class Box : MonoBehaviour
 
         if (canPush == true){
             rb.constraints = RigidbodyConstraints2D.None;
-            //rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
@@ -31,15 +30,23 @@ public class Box : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player"){
-            canPush = true;
+            
             
         }
 
-        if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog"){
-            canPush = false;
+        if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog") {
+            canPush = true;
         }
+        
         if (collision.gameObject.tag == "Floor"){
             rb.gravityScale = 1f;
+        }
+
+        if (collision.gameObject.tag == "Dog")
+        {
+            Debug.Log("he hit it");
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            canPush = false;
         }
     }
 
@@ -47,12 +54,23 @@ public class Box : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            canPush = false;
+            
+        }
+
+        if (collision.gameObject.tag == "Dog"){
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            canPush = true;
         }
 
         if (collision.gameObject.tag == "Player" && collision.gameObject.tag == "Dog")
         {
-            canPush = false;
+            canPush = true;
+        }
+
+        if (collision.gameObject.tag == "Platform")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
         }
     }
 
