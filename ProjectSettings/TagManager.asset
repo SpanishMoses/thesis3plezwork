@@ -17,6 +17,7 @@ TagManager:
   - SnowPile
   - Distract
   - Checkpoint
+  - Menu
   layers:
   - Default
   - TransparentFX

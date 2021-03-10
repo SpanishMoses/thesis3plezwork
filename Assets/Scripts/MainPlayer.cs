@@ -359,8 +359,8 @@ public class MainPlayer : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.M)){
-            PlayerPrefs.SetFloat("CheckPointX", 541.97f);
-            PlayerPrefs.SetFloat("CheckPointY", 13.76f);
+            PlayerPrefs.SetFloat("CheckPointX", 192.61f);
+            PlayerPrefs.SetFloat("CheckPointY", 8.25f);
             PlayerPrefs.SetFloat("CheckPointZ", 0);
         }
     }
@@ -425,6 +425,7 @@ public class MainPlayer : MonoBehaviour
         {
             //checkpoint = other.gameObject;           
             checkpoint check = collision.gameObject.GetComponent<checkpoint>();
+            check.playerHit = true;
             pointX = check.x;
             pointY = check.y;
             pointZ = check.z;

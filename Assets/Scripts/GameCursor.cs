@@ -24,6 +24,7 @@ public class GameCursor : MonoBehaviour
 
     public AudioSource noise;
 
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -83,5 +84,12 @@ public class GameCursor : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Menu" && player.GetButton("Interact")){
+            Debug.Log("it worked");
+            ButtonManager butt = collision.GetComponent<ButtonManager>();
+            butt.SinglePlayerbutton(butt.targetScene);
+        }
+    }
 }
