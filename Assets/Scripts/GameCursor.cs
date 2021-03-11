@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameCursor : MonoBehaviour
 {
@@ -24,6 +25,18 @@ public class GameCursor : MonoBehaviour
 
     public AudioSource noise;
 
+    public bool moveScene;
+
+    public GameObject load;
+    public Transform loadingBar;
+
+    public float currentAmount;
+    public float loadSpeed;
+    public string sceneName;
+
+    public float positionX;
+    public float positionY;
+    public float positionZ;
 
     private void Awake()
     {
@@ -82,14 +95,52 @@ public class GameCursor : MonoBehaviour
             sprite.sprite = nothing;
             noise.Play();
         }
+
+        if (moveScene == true){
+            load.SetActive(true);
+            currentAmount += loadSpeed * Time.deltaTime;
+
+            loadingBar.GetComponent<Image>().fillAmount = currentAmount / 100;
+
+            if (currentAmount >= 100)
+            {
+                PlayerPrefs.SetFloat("CheckPointX", positionX);
+                PlayerPrefs.SetFloat("CheckPointY", positionY);
+                PlayerPrefs.SetFloat("CheckPointZ", positionZ);
+                SceneManager.LoadScene(sceneName);
+                //butt.SinglePlayerbutton(butt.targetScene);
+            }
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Menu" && player.GetButton("Interact")){
-            Debug.Log("it worked");
-            ButtonManager butt = collision.GetComponent<ButtonManager>();
-            butt.SinglePlayerbutton(butt.targetScene);
+        if (collision.gameObject.tag == "Menu")
+        {
+            moveScene = true;
+            load.SetActive(true);
+            
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        ButtonManager butt = collision.GetComponent<ButtonManager>();
+            if (currentAmount >= 100)
+            {
+                
+                butt.SinglePlayerbutton(butt.targetScene);
+            }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Menu")
+        {
+            moveScene = false;
+            load.SetActive(false);
+            currentAmount = 0;
         }
     }
 }
