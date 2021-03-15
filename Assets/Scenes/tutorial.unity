@@ -280,6 +280,10 @@ MonoBehaviour:
   loadingBar: {fileID: 626405562}
   currentAmount: 0
   loadSpeed: 0
+  sceneName: 
+  positionX: 0
+  positionY: 0
+  positionZ: 0
 --- !u!212 &34968924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63541,7 +63545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275115139898202317, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.91
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 6275115139898202317, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
       propertyPath: m_LocalPosition.z
@@ -63581,11 +63585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275115139898202317, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6275115139898202317, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.3
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16db21db2e9768e479c96d5ff8786a45, type: 3}
@@ -63614,7 +63618,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.058099087, y: 0.35928136}
-  m_ConnectedAnchor: {x: 0.036865234, y: -0.15981497}
+  m_ConnectedAnchor: {x: 0.048461914, y: -0.1581532}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -63904,15 +63908,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325701856}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.08, y: 0}
+  m_Offset: {x: 0, y: -0.04}
   serializedVersion: 2
-  m_Radius: 0.42
+  m_Radius: 0.58
 --- !u!61 &1325701861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63920,7 +63924,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325701856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -64104,7 +64108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325701856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 197.53, y: 8.63, z: 0}
+  m_LocalPosition: {x: 162.35, y: 12.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1455463653}

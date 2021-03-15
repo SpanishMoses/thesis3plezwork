@@ -183,6 +183,10 @@ public class Dog : MonoBehaviour
             //sprite.flipX = false;
         }
 
+        if (isDistracted == true){
+            anim.SetFloat("Blend", 6);
+        }
+
         if (rb.velocity.y < 0 && isGrounded == false && beingPet == false || currTarget.position.y > 2 && isGrounded == false && beingPet == false)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
