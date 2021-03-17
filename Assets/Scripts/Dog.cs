@@ -244,7 +244,12 @@ public class Dog : MonoBehaviour
             rb.AddForce(Vector2.up * 400f);
         }*/
 
-        if (isGrounded == false && beingPet == false && isDistracted == false)
+        if (rb.velocity.y > 0.1f && isGrounded == false && beingPet == false && isDistracted == false)
+        {
+            anim.SetFloat("Blend", 3);
+        }
+
+        if (rb.velocity.y < 0.01f && isGrounded == false && beingPet == false && isDistracted == false)
         {
             anim.SetFloat("Blend", 3);
         }
