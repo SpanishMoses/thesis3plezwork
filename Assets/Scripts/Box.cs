@@ -48,6 +48,11 @@ public class Box : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             canPush = false;
         }
+
+        if (collision.gameObject.tag == "Platform")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -70,7 +75,7 @@ public class Box : MonoBehaviour
 
         if (collision.gameObject.tag == "Platform")
         {
-            gameObject.transform.parent = collision.gameObject.transform;
+            gameObject.transform.parent = null;
         }
     }
 
