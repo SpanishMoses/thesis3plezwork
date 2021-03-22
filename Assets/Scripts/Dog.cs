@@ -353,6 +353,13 @@ public class Dog : MonoBehaviour
             Rope rope = near.GetComponent<Rope>();
             if (rope != null)
             {
+                if (rope.transform.position.x > this.transform.position.x){
+                    sprite.flipX = false;
+                }
+                if (rope.transform.position.x < this.transform.position.x)
+                {
+                    sprite.flipX = true;
+                }
                 //Instantiate(dig.obj, dig.transform.position, Quaternion.identity);
                 //anim.SetFloat("Blend", 5);
                 rope.disable = true;
