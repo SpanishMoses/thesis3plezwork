@@ -84460,6 +84460,7 @@ MonoBehaviour:
   keyText: {fileID: 1934503336}
   beingPet: 0
   isDistracted: 0
+  justJumped: 0
   pointX: 0
   pointY: 0
   pointZ: 0
