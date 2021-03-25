@@ -201,7 +201,7 @@ public class Dog : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }*/
 
-        if (rb.velocity.x > 0 && isGrounded == true && beingPet == false && isDistracted == false)
+        if (rb.velocity.x > 0 && justJumped == false && beingPet == false && isDistracted == false)
         {
             RaycastHit2D ray3 = Physics2D.Raycast(transform.position, -Vector2.left + new Vector2(0, -.3f), rayDist, jumpLayer);
             Debug.DrawRay(transform.position, Vector2.left  + new Vector2(0, -.3f), Color.red, rayDist);
@@ -220,7 +220,7 @@ public class Dog : MonoBehaviour
                 }
                 Debug.Log("erp");
             }
-        } else if (rb.velocity.x < 0 && isGrounded == true && beingPet == false && isDistracted == false)
+        } else if (rb.velocity.x < 0 && justJumped == false && beingPet == false && isDistracted == false)
         {
             RaycastHit2D ray2 = Physics2D.Raycast(transform.position, Vector2.left + new Vector2(0, -.3f), rayDist, jumpLayer);
             Debug.DrawRay(transform.position, -Vector2.left + new Vector2(0, -.3f), Color.red, rayDist);
@@ -253,8 +253,9 @@ public class Dog : MonoBehaviour
 
         if (rb.velocity.y < 0.01f && isGrounded == false && beingPet == false && isDistracted == false)
         {
-            anim.SetFloat("Blend", 3);
+            anim.SetFloat("Blend", 7);
         }
+
 
         if (justJumped == false && beingPet == false && isDistracted == false)
         {
