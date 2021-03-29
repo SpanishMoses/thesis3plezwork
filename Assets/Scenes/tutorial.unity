@@ -74659,9 +74659,9 @@ Transform:
   m_LocalPosition: {x: 463.4968, y: 3.6792595, z: -725.2915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 362130634}
   - {fileID: 1531177303}
   - {fileID: 1759360603}
+  - {fileID: 362130634}
   - {fileID: 1281991449}
   - {fileID: 1520063930}
   - {fileID: 1980096998}
@@ -84466,6 +84466,7 @@ MonoBehaviour:
   pointZ: 0
   noise: {fileID: 1325701857}
   keyNoise: {fileID: 8300000, guid: eb81ded20064310458bd3217ea6baa24, type: 3}
+  myTest: -1
 --- !u!212 &1325701865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92218,7 +92219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.478591, z: 1}
   m_Children: []
   m_Father: {fileID: 520125340}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550094975
 GameObject:
@@ -93255,7 +93256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 520125340}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1759360604
 Rigidbody2D:
@@ -95978,7 +95979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7358751473099942493, guid: 7bf9e808d020236498366aa937b8a0fb, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7358751473099942493, guid: 7bf9e808d020236498366aa937b8a0fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

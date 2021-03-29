@@ -80,6 +80,7 @@ public class Dog : MonoBehaviour
 
     //public Animator anim;
 
+    public float myTest;
 
     // Start is called before the first frame update
     void Start()
@@ -246,12 +247,12 @@ public class Dog : MonoBehaviour
             rb.AddForce(Vector2.up * 400f);
         }*/
 
-        if (rb.velocity.y > 0.1f && isGrounded == false && beingPet == false && isDistracted == false)
+        if (rb.velocity.y > 0.5f && beingPet == false && isDistracted == false)
         {
             anim.SetFloat("Blend", 3);
         }
 
-        if (rb.velocity.y < 0.01f && isGrounded == false && beingPet == false && isDistracted == false)
+        if (rb.velocity.y < myTest && beingPet == false && isDistracted == false)
         {
             anim.SetFloat("Blend", 7);
         }
