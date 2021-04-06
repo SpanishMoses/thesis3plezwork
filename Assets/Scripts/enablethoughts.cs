@@ -6,6 +6,7 @@ public class enablethoughts : MonoBehaviour
 {
 
     public GameObject thoughts;
+    public GameObject thoughtBubbleParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class enablethoughts : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             thoughts.SetActive(true);
+            thoughtBubbleParticle.SetActive(true);
         }
     }
 
@@ -31,6 +33,7 @@ public class enablethoughts : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             thoughts.SetActive(false);
+            thoughtBubbleParticle.SetActive(false);
         }
     }
 }

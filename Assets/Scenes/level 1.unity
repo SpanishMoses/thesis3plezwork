@@ -8161,6 +8161,7 @@ MonoBehaviour:
   pointZ: 0
   noise: {fileID: 752021563}
   keyNoise: {fileID: 8300000, guid: eb81ded20064310458bd3217ea6baa24, type: 3}
+  myTest: 0
 --- !u!82 &752021563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21580,7 +21581,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: 5fef49c811aba034aaa5ec8395422712, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
