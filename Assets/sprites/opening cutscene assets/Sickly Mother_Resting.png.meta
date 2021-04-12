@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: b88b8ebe33da18746b51e9b0a26bfcf6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1855615485249715381
+    second: Sickly Mother_Resting_0
+  - first:
+      213: 7492808111390169832
+    second: Sickly Mother_Resting_1
+  - first:
+      213: -3280441282159232084
+    second: Sickly Mother_Resting_2
+  - first:
+      213: -3146613394436149280
+    second: Sickly Mother_Resting_3
+  - first:
+      213: 827356992546587475
+    second: Sickly Mother_Resting_4
+  - first:
+      213: 6433554225891209288
+    second: Sickly Mother_Resting_5
+  - first:
+      213: 5388061186533976583
+    second: Sickly Mother_Resting_6
+  - first:
+      213: -1900723845661231595
+    second: Sickly Mother_Resting_7
+  - first:
+      213: -999225196177539776
+    second: Sickly Mother_Resting_8
+  - first:
+      213: 3415763595271116744
+    second: Sickly Mother_Resting_9
+  - first:
+      213: 6593962587332435225
+    second: Sickly Mother_Resting_10
+  - first:
+      213: -4023960658999910816
+    second: Sickly Mother_Resting_11
+  - first:
+      213: 4624153615277333982
+    second: Sickly Mother_Resting_12
+  - first:
+      213: 926909471747174881
+    second: Sickly Mother_Resting_13
+  - first:
+      213: 8968673504730953337
+    second: Sickly Mother_Resting_14
+  - first:
+      213: 2334691023624389916
+    second: Sickly Mother_Resting_15
+  - first:
+      213: -289977618020603997
+    second: Sickly Mother_Resting_16
+  - first:
+      213: -8010197533868726796
+    second: Sickly Mother_Resting_17
+  - first:
+      213: 1294360430987059294
+    second: Sickly Mother_Resting_18
+  - first:
+      213: 15771241147447222
+    second: Sickly Mother_Resting_19
+  - first:
+      213: 901286929390090531
+    second: Sickly Mother_Resting_20
+  - first:
+      213: -1157299160191170748
+    second: Sickly Mother_Resting_21
+  - first:
+      213: 691613069149294821
+    second: Sickly Mother_Resting_22
+  - first:
+      213: 2408888245716137736
+    second: Sickly Mother_Resting_23
+  - first:
+      213: -5506511469911317394
+    second: Sickly Mother_Resting_24
+  - first:
+      213: -6527070102483612031
+    second: Sickly Mother_Resting_25
+  - first:
+      213: 4233467912156486950
+    second: Sickly Mother_Resting_26
+  - first:
+      213: -92927007055112792
+    second: Sickly Mother_Resting_27
+  - first:
+      213: 4164318713188558684
+    second: Sickly Mother_Resting_28
+  - first:
+      213: 4923303361765414827
+    second: Sickly Mother_Resting_29
+  - first:
+      213: 2439933007797315412
+    second: Sickly Mother_Resting_30
+  - first:
+      213: 1796040347927208030
+    second: Sickly Mother_Resting_31
+  - first:
+      213: -3722263613840801477
+    second: Sickly Mother_Resting_32
+  - first:
+      213: 4705322302194461775
+    second: Sickly Mother_Resting_33
+  - first:
+      213: -7450113993743988298
+    second: Sickly Mother_Resting_34
+  - first:
+      213: -2741267451936809566
+    second: Sickly Mother_Resting_35
+  - first:
+      213: 5228099461466555562
+    second: Sickly Mother_Resting_36
+  - first:
+      213: 505232936626796178
+    second: Sickly Mother_Resting_0
+  - first:
+      213: 7204244791970343350
+    second: Sickly Mother_Resting_1
+  - first:
+      213: -4626878213467827919
+    second: Sickly Mother_Resting_2
+  - first:
+      213: -8974488821954600125
+    second: Sickly Mother_Resting_3
+  - first:
+      213: 5738434728512258892
+    second: Sickly Mother_Resting_4
+  - first:
+      213: -858689837438406275
+    second: Sickly Mother_Resting_5
+  - first:
+      213: 7513321441734688877
+    second: Sickly Mother_Resting_6
+  - first:
+      213: -197142343902881011
+    second: Sickly Mother_Resting_7
+  - first:
+      213: -3755099477708861768
+    second: Sickly Mother_Resting_8
+  - first:
+      213: -5518509208694063752
+    second: Sickly Mother_Resting_9
+  - first:
+      213: -4570213257277192999
+    second: Sickly Mother_Resting_10
+  - first:
+      213: -6657248008826470443
+    second: Sickly Mother_Resting_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296b774dda2f20700800000000000000
+      internalID: 505232936626796178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 225
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9a954f77e9af360800000000000000
+      internalID: 7204244791970343350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 225
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131914377c60acfb0800000000000000
+      internalID: -4626878213467827919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343aeae17f5347380800000000000000
+      internalID: -8974488821954600125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 180
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c430db76bf303af40800000000000000
+      internalID: 5738434728512258892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 180
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71fe3374225514f0800000000000000
+      internalID: -858689837438406275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d600ce14b0ea44860800000000000000
+      internalID: 7513321441734688877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_7
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 135
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b1b7d251c934df0800000000000000
+      internalID: -197142343902881011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 135
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be88ee9be433ebc0800000000000000
+      internalID: -3755099477708861768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d711eec115a63b0800000000000000
+      internalID: -5518509208694063752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 90
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4463ca1475390c0800000000000000
+      internalID: -4570213257277192999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 90
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfb8342534bc93a0800000000000000
+      internalID: -6657248008826470443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd9179963b4c2040800000000000000
+      internalID: 4624153615277333982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 45
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e17f6ae04b0ddc00800000000000000
+      internalID: 926909471747174881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 45
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97632f3d801277c70800000000000000
+      internalID: 8968673504730953337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sickly Mother_Resting_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15cc63cd1d766020800000000000000
+      internalID: 2334691023624389916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

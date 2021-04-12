@@ -80741,9 +80741,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.46
       objectReference: {fileID: 0}
+    - target: {fileID: 7493937491988080822, guid: 4fabbb1ba9eec674db0ab28e03e25a5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 7493937492079759480, guid: 4fabbb1ba9eec674db0ab28e03e25a5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.932434
+      value: -13.81
       objectReference: {fileID: 0}
     - target: {fileID: 7493937492079759480, guid: 4fabbb1ba9eec674db0ab28e03e25a5b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -90335,7 +90339,7 @@ MonoBehaviour:
   pointZ: 0
   noise: {fileID: 1325701857}
   keyNoise: {fileID: 8300000, guid: eb81ded20064310458bd3217ea6baa24, type: 3}
-  myTest: -1
+  myTest: -0.005
 --- !u!212 &1325701865
 SpriteRenderer:
   m_ObjectHideFlags: 0
