@@ -13,6 +13,8 @@ public class checkpoint : MonoBehaviour
 
     public bool playerHit;
 
+    public GameObject block;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class checkpoint : MonoBehaviour
     {
         if (playerHit == true){
             anim.SetFloat("Blend", 1);
+            block.SetActive(true);
         }
     }
 }
