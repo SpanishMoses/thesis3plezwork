@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewLevel : MonoBehaviour
 {
+    public string newLevel;
 
-    public void SinglePlayerbutton(string newGameLevel)
+    public void SinglePlayerbutton()
     {
-        SceneManager.LoadScene(newGameLevel);
+        SceneManager.LoadScene(newLevel);
     }
 }

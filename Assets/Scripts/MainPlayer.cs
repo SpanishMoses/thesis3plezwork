@@ -67,7 +67,10 @@ public class MainPlayer : MonoBehaviour
 
     public float currentAmount;
     public float loadSpeed;
+    public bool isRestarting;
 
+    public GameObject fadeIn;
+    public GameObject fadeOut;
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +91,8 @@ public class MainPlayer : MonoBehaviour
         //Physics.SyncTransforms();
         curScene = SceneManager.GetActiveScene();
         sceneName = curScene.name;
+        fadeOut.SetActive(true);
+        isRestarting = false;
     }
 
     // Update is called once per frame
@@ -341,7 +346,7 @@ public class MainPlayer : MonoBehaviour
             keyText.SetActive(false);
         }
 
-        if (player.GetButton("Restart"))
+        if (player.GetButton("Restart") && isRestarting == false)
         {
             load.SetActive(true);
             currentAmount += loadSpeed * Time.deltaTime;
@@ -352,10 +357,12 @@ public class MainPlayer : MonoBehaviour
             currentAmount = 0;
         }
             loadingBar.GetComponent<Image>().fillAmount = currentAmount / 100;
-            if (currentAmount >= 100)
+            if (currentAmount >= 100 && isRestarting == false)
             {
-                SceneManager.LoadScene(sceneName);
-                ResetPos();
+                isRestarting = true;
+                fadeIn.SetActive(true);
+                //SceneManager.LoadScene(sceneName);
+                //ResetPos();
             }
 
             if (Input.GetKey(KeyCode.M)){
@@ -364,7 +371,6 @@ public class MainPlayer : MonoBehaviour
             PlayerPrefs.SetFloat("CheckPointZ", 0);
         }
     }
-
 
     private void FixedUpdate()
     {
