@@ -1261,7 +1261,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28486264, y: 0}
+  m_Offset: {x: 1.1523702, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1272,7 +1272,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2951791, y: 1}
+  m_Size: {x: 5.030194, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &281812439
 Transform:
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa67c5d68fa33614abedfd654e1e3ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: tutorial
+  targetScene: opening cutscene
 --- !u!1 &455220272
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,7 +7038,7 @@ MonoBehaviour:
   loadingBar: {fileID: 1510341627}
   currentAmount: 0
   loadSpeed: 30
-  sceneName: tutorial
+  sceneName: opening cutscene
   positionX: 200.45
   positionY: 8.77
   positionZ: 0

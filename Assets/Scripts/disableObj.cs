@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class disableObj : MonoBehaviour
 {
-
+    public string targetScene;
     public GameObject disable;
     public GameObject enable;
 
@@ -23,5 +24,15 @@ public class disableObj : MonoBehaviour
     void doIt(){
         disable.SetActive(false);
         enable.SetActive(true);
+    }
+
+    public void SinglePlayerbutton()
+    {
+        StartCoroutine(loadlevel());
+        IEnumerator loadlevel()
+        {
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.LoadScene(targetScene);
+        }
     }
 }
