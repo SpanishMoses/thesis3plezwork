@@ -7040,7 +7040,7 @@ MonoBehaviour:
   loadSpeed: 30
   sceneName: opening cutscene
   positionX: 200.45
-  positionY: 8.77
+  positionY: 5.75
   positionZ: 0
 --- !u!212 &603428512
 SpriteRenderer:
