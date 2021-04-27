@@ -9,6 +9,7 @@ public class LoadNewLevel : MonoBehaviour
 
     public void SinglePlayerbutton()
     {
+
         SceneManager.LoadScene(newLevel);
     }
 }

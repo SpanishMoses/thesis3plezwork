@@ -44,6 +44,9 @@ public class FinalPlayer : MonoBehaviour
     private void Awake()
     {
         player = ReInput.players.GetPlayer(playerID);
+        PlayerPrefs.SetFloat("CheckPointX", 567.8f);
+        PlayerPrefs.SetFloat("CheckPointY", 142.63f);
+        PlayerPrefs.SetFloat("CheckPointZ", 0);
         pointX = PlayerPrefs.GetFloat("CheckPointX");
         pointY = PlayerPrefs.GetFloat("CheckPointY");
         pointZ = PlayerPrefs.GetFloat("CheckPointZ");
