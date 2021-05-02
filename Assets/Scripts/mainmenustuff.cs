@@ -23,9 +23,5 @@ public class mainmenustuff : MonoBehaviour
         {
             Application.Quit();
         }
-
-        if (Input.GetKeyDown(KeyCode.L)){
-            SceneManager.LoadScene("level 3 cutscene");
-        }
     }
 }

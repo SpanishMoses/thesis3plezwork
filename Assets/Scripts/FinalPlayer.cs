@@ -129,12 +129,6 @@ public class FinalPlayer : MonoBehaviour
 
         canJump = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
-        if (Input.GetKey(KeyCode.M))
-        {
-            PlayerPrefs.SetFloat("CheckPointX", 567.8f);
-            PlayerPrefs.SetFloat("CheckPointY", 142.63f);
-            PlayerPrefs.SetFloat("CheckPointZ", 0);
-        }
         if (player.GetButton("quit"))
         {
             SceneManager.LoadScene("main menu");

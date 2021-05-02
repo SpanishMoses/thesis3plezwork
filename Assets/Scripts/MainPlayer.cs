@@ -370,12 +370,6 @@ public class MainPlayer : MonoBehaviour
                 //SceneManager.LoadScene(sceneName);
                 //ResetPos();
             }
-
-            if (Input.GetKey(KeyCode.M)){
-            PlayerPrefs.SetFloat("CheckPointX", 192.61f);
-            PlayerPrefs.SetFloat("CheckPointY", 8.25f);
-            PlayerPrefs.SetFloat("CheckPointZ", 0);
-        }
     }
 
     private void FixedUpdate()
