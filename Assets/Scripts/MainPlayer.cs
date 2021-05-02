@@ -262,14 +262,16 @@ public class MainPlayer : MonoBehaviour
             lowSprite.flipX = true;
         }
 
-        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0 && pushing == false && isPetting == false)
+        if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") == 0 && pushing == false)
         {
+            Debug.Log(" the other ANIMATION WORKED");
             topAnim.SetFloat("Blend", 2);
             lowAnim.SetFloat("Blend", 2);
         }
 
         if (player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") < 0 && pushing == false || player.GetButton("Aim&Shoot") && player.GetAxis("MoveHorz") > 0 && pushing == false && isPetting == false)
         {
+            Debug.Log("ANIMATION WORKED");
             topAnim.SetFloat("Blend", 3);
             lowAnim.SetFloat("Blend", 3);
         }
