@@ -343,6 +343,10 @@ public class MainPlayer : MonoBehaviour
             }
         }
 
+        if (player.GetButton("quit")){
+            SceneManager.LoadScene("main menu");
+        }
+
         if (gotKey == false)
         {
             keyText.SetActive(false);

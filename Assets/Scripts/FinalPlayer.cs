@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.SceneManagement;
 
 public class FinalPlayer : MonoBehaviour
 {
@@ -133,6 +134,10 @@ public class FinalPlayer : MonoBehaviour
             PlayerPrefs.SetFloat("CheckPointX", 567.8f);
             PlayerPrefs.SetFloat("CheckPointY", 142.63f);
             PlayerPrefs.SetFloat("CheckPointZ", 0);
+        }
+        if (player.GetButton("quit"))
+        {
+            SceneManager.LoadScene("main menu");
         }
     }
 
