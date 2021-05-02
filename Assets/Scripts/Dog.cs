@@ -439,7 +439,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Distract"){
             isDistracted = true;
             currTarget = collision.gameObject.transform;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
