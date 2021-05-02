@@ -298,6 +298,7 @@ public class Dog : MonoBehaviour
 
         if (startBite == true){
             canBite = false;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
             anim.SetFloat("Blend", 5);
             currTarget = transform;
             //StartCoroutine(beginbite());
@@ -310,6 +311,7 @@ public class Dog : MonoBehaviour
 
     IEnumerator begindig(){
         anim.SetFloat("Blend", 2);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(1);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1f);
 
@@ -323,6 +325,8 @@ public class Dog : MonoBehaviour
             }
         }
         startDig = false;
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     /*IEnumerator beginbite(){
@@ -368,6 +372,8 @@ public class Dog : MonoBehaviour
             }
         }
         startBite = false;
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -433,6 +439,7 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Distract"){
             isDistracted = true;
             currTarget = collision.gameObject.transform;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 
@@ -451,6 +458,8 @@ public class Dog : MonoBehaviour
         if (collision.gameObject.tag == "Distract")
         {
             isDistracted = false;
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             currTarget = playerTarget.transform;
         }
     }
