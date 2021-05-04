@@ -195,6 +195,7 @@ public class Dog : MonoBehaviour
 
         if (rb.velocity.y < 0 && isGrounded == false && beingPet == false && isDistracted == false || currTarget.position.y > 2 && isGrounded == false && beingPet == false && isDistracted == false)
         {
+            //justJumped = true;
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         /*else if (rb.velocity.y > 0)
@@ -208,6 +209,7 @@ public class Dog : MonoBehaviour
             Debug.DrawRay(transform.position, Vector2.left  + new Vector2(0, -.3f), Color.red, rayDist);
             if (ray3.collider != null)
             {
+                justJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
@@ -227,6 +229,7 @@ public class Dog : MonoBehaviour
             Debug.DrawRay(transform.position, -Vector2.left + new Vector2(0, -.3f), Color.red, rayDist);
             if (ray2.collider != null)
             {
+                justJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
@@ -247,12 +250,16 @@ public class Dog : MonoBehaviour
             rb.AddForce(Vector2.up * 400f);
         }*/
 
-        if (rb.velocity.y > 0.5f && beingPet == false && isDistracted == false)
+        if (isGrounded == true){
+            justJumped = false;
+        }
+
+        if (rb.velocity.y > 0.5f && beingPet == false && isDistracted == false && justJumped == true)
         {
             anim.SetFloat("Blend", 3);
         }
 
-        if (rb.velocity.y < myTest && beingPet == false && isDistracted == false)
+        if (rb.velocity.y < myTest && beingPet == false && isDistracted == false && justJumped == true)
         {
             anim.SetFloat("Blend", 7);
         }
@@ -264,6 +271,7 @@ public class Dog : MonoBehaviour
             Debug.DrawRay(transform.position, -Vector2.up, Color.red, rayDist);
             if (ray.collider == null)
             {
+                justJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.velocity += Vector2.up * 14f;
                 anim.SetFloat("Blend", 3);
@@ -279,7 +287,7 @@ public class Dog : MonoBehaviour
             }
         }
 
-        if (isGrounded == false && justJumped == false)
+        /*if (isGrounded == false && justJumped == false)
         {
             justJumped = true;
         }
@@ -288,7 +296,7 @@ public class Dog : MonoBehaviour
         {
             justJumped = false;
             Debug.Log("attempted");
-        }
+        }*/
 
 
         if (startDig == true){
